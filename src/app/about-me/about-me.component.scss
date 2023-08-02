@@ -1,0 +1,102 @@
+	body {
+	    display: flex;
+	    justify-content: center;
+
+	section {
+		display: flex;
+	    justify-content: center;
+	    flex-direction: column;
+	    width: 85vw;
+
+		h1 {
+			color: var(--black, #000);
+			font-family: "Syne";
+			font-size: 5.50vw;
+			min-width: 630px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 100%; /* 78px */
+			letter-spacing: 0.78px;
+			float: left;
+		}
+		
+		div {
+			display: flex; 
+			flex-direction: row;
+			justify-content: space-between !important;
+
+
+			@media (max-width: 900px) {
+				flex-direction: column;
+				padding-top: 10vh;
+			}
+
+			main {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				margin-right: 10px;
+
+					h2 {
+						min-width: 30vw;
+						color: var(--black, #000);
+						font-family: "Overpass";
+						font-size: 2vw;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 120%; /* 27.6px */
+
+						@media (max-width: 900px) {
+							font-size: 5vw;
+						}
+					}
+				
+					button {
+						display: inline-flex;
+						padding: 20px 60px;
+						justify-content: center;
+						align-items: center;
+						gap: 10px;
+						background: transparent;
+						transition: .2s ease-in-out 0s;
+
+						@media (max-width: 900px) {
+							display: none;
+						}
+					
+						a {
+							color: var(--black, #000);
+							font-family: "Overpass";
+							font-size: 23px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 120%; /* 27.6px */
+						}
+					}
+
+					button:hover {
+						a{
+							color: #fff;
+						}
+							cursor: pointer;
+							transform: scale(1.25, 1);
+							background-color: #000;
+						}
+				}
+			}
+
+
+		div {
+			margin-left: 10px;
+			img {
+				width: 40vw;
+				height: 40vw;
+
+				@media (max-width: 900px) {
+					width: 80vw;
+					height: 80vw;
+				}
+			}
+		}
+	}
+}
