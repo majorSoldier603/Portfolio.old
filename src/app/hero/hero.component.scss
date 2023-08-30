@@ -49,9 +49,9 @@ $base: 0.6rem;
 	align-content: center;
 	justify-content: space-between;
 	align-items: center;
-	width: 85vw;
+	width: 92vw;
 
-	h1 {
+	span {
 		color: var(--black, #000);
 		font-family: Overpass;
 		font-size: 23px;
@@ -60,11 +60,18 @@ $base: 0.6rem;
 		line-height: 100%; /* 23px */
 		letter-spacing: -0.575px;
 		transform: rotate(-90deg);
+		margin: 0;
 	}
 
 	h2 {
 		display: flex;
-		
+		color: var(--black, #000);
+		font-family: Overpass;
+		font-size: 23px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 100%; /* 23px */
+		letter-spacing: -0.575px;
 		padding-top: 300px;
 		transform: rotate(0deg);
 	}
