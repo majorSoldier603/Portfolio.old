@@ -1,4 +1,4 @@
-body {
+.right {
     main {
         display: flex;
         flex-direction: row-reverse;
@@ -26,12 +26,12 @@ body {
                 border: 5px solid transparent;
 
                 img {
-                    width: 75.702px;
-                    height: 75.702px;
+                    width: 12%;
+                    height: 12%;
                     scale: 1.8;
                     position: absolute;
                     top: 42%;
-                    left: -1.5vw;
+                    left: -2.3vw;
                 }
             }
         }
@@ -134,12 +134,12 @@ body {
                 border: 5px solid transparent;
 
                 img {
-                    width: 75.702px;
-                    height: 75.702px;
+                    width: 12%;
+                    height: 12%;
                     scale: 1.8;
                     position: absolute;
                     top: 42%;
-                    right: -1.3vw !important;
+                    right: -2.3vw;
                 }
             }
         }
