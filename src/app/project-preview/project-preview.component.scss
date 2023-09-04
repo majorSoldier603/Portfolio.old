@@ -2,45 +2,56 @@
 	main {
 		display: flex;
 		flex-direction: row-reverse;
+		margin-bottom: 10rem;
 
-
-		div {
-			position: relative;
-			img {
-				display: flex;
-				width: 36.46vw;
-				height: 25vw;
-				padding: 10px 0px;
-				align-items: flex-start;
-				gap: 10px;
-				flex-shrink: 0;
-				border: 0px solid #000;
-			}
-
+		a {
 			div {
-				position: absolute;
-				top: 2vw;
-				left: -2vw;
-				width: 100%;
-				height: 95%;
-				border: 5px solid transparent;
-
-				img {
-					width: 12%;
-					height: 12%;
-					scale: 1.8;
+				position: relative;
+			img {
+					display: flex;
+					width: 36.46vw;
+					height: 25vw;
+					padding: 10px 0px;
+					align-items: flex-start;
+					gap: 10px;
+					flex-shrink: 0;
+					border: 0px solid #000;
+					transition: grayscale 0.5s ease;
+				}
+				.imgrayscale {
+					filter:grayscale(100%);
+					transition:.5s ease-in-out;
+				}:hover {
+					filter: grayscale(0%);
+				}
+	
+				div {
 					position: absolute;
-					top: 42%;
-					left: -2.3vw;
+					top: 2vw;
+					left: -2vw;
+					width: 100%;
+					height: 95%;
+					border: 5px solid transparent;
+	
+					img {
+						width: 12%;
+						height: 12%;
+						scale: 1.8;
+						position: absolute;
+						top: 42%;
+						left: -2.3vw;
+					}
 				}
 			}
 		}
 
 		span {
 
-			h1{
+			padding-right: 10rem;
+
+			h1 {
 				color: #000;
-				text-align: right;
+				text-align: left;
 				font-variant-numeric: lining-nums proportional-nums;
 				font-family: Syne;
 				font-size: 2.6vw;
@@ -49,7 +60,7 @@
 				line-height: 120%;
 			}
 
-			span {
+			h3 {
 				color: var(--black, #000);
 				font-family: Syne;
 				font-size: 2.4vw;
@@ -80,7 +91,8 @@
 		div {
 			a {
 				display: flex;
-				padding: 20px 40px;
+				padding: 1.5rem 3rem;
+				max-width: 30%;
 				justify-content: center;
 				align-items: center;
 				gap: 10px;
@@ -101,41 +113,48 @@
 	main {
 		display: flex;
 		flex-direction: row;
+		margin-bottom: 10rem;
 
-		div {
-			position: relative;
-			img {
-				display: flex;
-				width: 36.46vw;
-				height: 25vw;
-				padding: 10px 0px;
-				align-items: flex-start;
-				gap: 10px;
-				flex-shrink: 0;
-				border: 0px solid #000;
-			}
-
+		a {
 			div {
-				position: absolute;
-				top: 2vw;
-				left: 2vw;
-				width: 100%;
-				height: 95%;
-				border: 5px solid transparent;
-
+				position: relative;
 				img {
-					width: 12%;
-					height: 12%;
-					scale: 1.8;
+					filter: grayscale(100%);
+					display: flex;
+					width: 36.46vw;
+					height: 25vw;
+					padding: 10px 0px;
+					align-items: flex-start;
+					gap: 10px;
+					flex-shrink: 0;
+					border: 0px solid #000;
+				}
+	
+				div {
 					position: absolute;
-					top: 42%;
-					right: -2.3vw;
+					top: 2vw;
+					left: 2vw;
+					width: 100%;
+					height: 95%;
+					border: 5px solid transparent;
+	
+					img {
+						width: 12%;
+						height: 12%;
+						scale: 1.8;
+						position: absolute;
+						top: 42%;
+						right: -2.3vw;
+					}
 				}
 			}
 		}
 
 		span {
-			h1{
+
+			padding-left: 10rem;
+
+			h1 {
 				color: #000;
 				text-align: right;
 				font-variant-numeric: lining-nums proportional-nums;
@@ -146,7 +165,7 @@
 				line-height: 120%;
 			}
 
-			span {
+			h3 {
 				color: var(--black, #000);
 				font-family: Syne;
 				font-size: 2.4vw;
@@ -176,29 +195,20 @@
 
 		div {
 			a {
-				appearance: auto;
-				text-rendering: auto;
-				color: buttontext;
-				letter-spacing: normal;
-				word-spacing: normal;
-				line-height: normal;
-				text-transform: none;
-				text-indent: 0px;
-				text-shadow: none;
-				display: inline-block;
-				text-align: center;
-				align-items: flex-start;
-				cursor: default;
-				box-sizing: border-box;
-				background-color: buttonface;
-				writing-mode: horizontal-tb !important;
-				margin: 0em;
-				padding-block: 1px;
-				padding-inline: 6px;
-				border-width: 2px;
-				border-style: outset;
-				border-color: buttonborder;
-				border-image: initial;
+				display: flex;
+				padding: 1.5rem 3rem;
+				max-width: 30%;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				border: 4px solid var(--Black, #000);
+				box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+				color: var(--Black, #000);
+				font-family: Overpass;
+				font-size: 23px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%; /* 27.6px */
 			}
 		}
 	}
@@ -207,7 +217,9 @@
 .fade-in-out {
 	opacity: 1;
 	transition: opacity 0.5s ease-in-out;
+	transition: grayscale(0%) ease-in-out;
 	border: 5px solid #000 !important;
+
 }
   
 .fade-in-out.fade-out {

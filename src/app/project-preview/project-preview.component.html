@@ -2,7 +2,6 @@
 	<main>
 		<a [href]="project.Link" target="_blank" rel="noopener noreferrer">
 			<div (mouseenter)="fadeInOut(false)" (mouseleave)="fadeInOut(true)">
-				<a [href]="project.gitHubLink"></a>
 				<img src="assets/project-list/{{ project.img }}">
 				<div class="fade-in-out" [id]="projectId">
 					<img class="" src="assets/my-skills/cyrcle-arrow.svg">
@@ -11,7 +10,7 @@
 		</a>
 		<span>
 			<h1>{{ projectId }}/05</h1>
-			<span>{{ project.title }}</span>
+			<h3>{{ project.title }}</h3>
 			<h4>{{ project.techstack }}</h4>
 			<p>{{ project.tldr }}</p>
 			<div type="button">
