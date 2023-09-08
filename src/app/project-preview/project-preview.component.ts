@@ -26,6 +26,7 @@ export class ProjectPreviewComponent implements OnInit {
 		let projectIdarr = this.projectId.toString()
 		console.log('this.projectId: ', projectIdarr, projectIdarr);
 	}
+	
 	fadeInOut(isFadeOut:boolean) {
 		const element = document.querySelector('fade-in-out');
 		if (element) {
