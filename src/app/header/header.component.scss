@@ -34,6 +34,7 @@ header {
 	justify-content: space-between;
 	height: 7.5vh;
 	padding: 1em;
+	position: relative;
 }
 
 .menu > li {
@@ -183,8 +184,8 @@ header {
 			
 			&::before {
 				z-index: 10;
-				border-left: 10px solid black;
-				border-bottom: 10px solid black;
+				border-left: 0.06em solid black;
+				border-bottom: 0.06em solid black;
 				background-color: transparent;
 				bottom: -80px;
 				left: -90px;
@@ -197,7 +198,7 @@ header {
 			&::after {
 				border: 10px solid transparent;
 				z-index: 19;
-				top: 130%;
+				top: 140%;
 				bottom: 0px;
 				right: -30px;
 				opacity: 0;
@@ -237,8 +238,8 @@ header {
 
 		.about {
 			&::before {
-				bottom: -80px;
-				left: -90px;
+				bottom: -50%;
+				left: -10%;
 			}
 
 			&::after {
@@ -253,8 +254,8 @@ header {
 
 		.skills {
 			&::before {
-				bottom: -80px;
-				left: -170px;
+				bottom: -50%;
+				left: -22%;
 			}
 
 			&::after {
@@ -268,8 +269,8 @@ header {
 
 		.portfolio {
 			&::before {
-				bottom: -80px;
-				left: -140px;
+				bottom: -50%;
+				left: -20%;
 			}
 
 			&::after {
@@ -287,41 +288,56 @@ header {
 
 .shortcuts-item {
 	color: #000000;
-	text-align: center;
 	font-size: 10vh;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 100%;
 	letter-spacing: -2.4px;
-	@media (max-width: 1600px) {
+	@media (max-width: 900px) {
 		font-size: 5vh;
-	}
-	@media (max-width: 300px) {
-		font-size: 3vh;
 	}
 }
 
 
 .hello-box {
-	clip-path: polygon(0 0%, 100% 50%, 100% 100%, 48% 100%, 0 100%);
-	height: 50vh;
+	clip-path: polygon(0 0%, 100% 35%, 100% 100%, 48% 100%, 0 100%);
+	height: 20vh;
 	width: 100vw;
 	background-color: black;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	display: flex;
+	flex-direction: row;
+	align-content: flex-end;
 	justify-content: space-between;
 	align-items: flex-end;
+	@media (max-width: 900px) {
+		flex-direction: column;
+		height: 33vh;
+	}
+
+	div {
+		display: flex; 
+		align-items: flex-start; 
+		justify-content: space-between;
+	}
 
 	h3 {
 		color: var(--cream, #FFFCF3);
-		font-size: 78px;
-		letter-spacing: 0.78px;
-		margin: 0 ;
 
+		font-family: Syne;
+		font-size: min(max(1px, 12vw), 7rem);
+		font-style: normal;
+		font-weight: 800;
+		line-height: 100%; /* 78px */
+		letter-spacing: 0.78px;
+		margin: 0;
+		display: contents;
 
 
 		@media (max-width: 900px) {
-			font-size: 3vh;
-
 			animation-name: color ;
 			animation-duration: 2s;
 			animation-iteration-count: infinite;
@@ -343,20 +359,30 @@ header {
 		}
 	}:hover {
 		color: #5988FF;
+		transition: color 400ms;
 	}
 
-	h2 {
+	a {
 		color: var(--cream, #FFFCF3);
 		font-family: Overpass;
-		font-size: 23px;
+		font-size: 2rem;
 		text-align: left;
 		font-weight: 300;
 		letter-spacing: -0.575px;
+		line-height: normal;
 		margin: 0;
 
 		@media (max-width: 900px) {
 			font-size: 1vh;
 		}
+	}
+	a:link {
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	a:hover {
+		color: white;
 	}
 }
 
@@ -364,6 +390,10 @@ header {
 	div:first-child{
 		padding-left: 100px;
 		flex-direction: column;
+
+		@media (max-width: 900px) {
+			padding-left: unset;
+		}
 	}
 }
 
@@ -375,11 +405,8 @@ header {
 		gap: 5vw;
 		flex-shrink: 0;
 		padding-right: 100px;
-		padding-bottom: 58px;
 
 		@media (max-width: 900px) {
-
-
 			padding-bottom: 0px;
 		}
 	}

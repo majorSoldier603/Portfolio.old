@@ -113,9 +113,13 @@
 	}
 
 	span {
-		margin-top: 10px;
+		color: var(--Black, #000);
+		font-family: Overpass;
+		font-style: normal;
+		line-height: 120%; /* */
+		padding-top: 10px;
 		font-weight: 700;
-		font-size: 1.75rem;
+		font-size: 1rem;
 		transition-delay: 1s;
 		text-align: center;
 	}
