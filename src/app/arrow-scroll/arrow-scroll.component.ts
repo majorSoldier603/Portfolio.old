@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
 
 @Component({
 	selector: 'app-arrow-scroll',
@@ -7,7 +6,9 @@ import * as AOS from 'aos';
 	styleUrls: ['./arrow-scroll.component.scss']
 })
 export class ArrowScrollComponent implements OnInit {
+
+	constructor() { }
+
 	ngOnInit() {
-		AOS.init();
 	}
 }

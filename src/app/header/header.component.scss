@@ -293,7 +293,21 @@ header {
 	line-height: 100%;
 	letter-spacing: -2.4px;
 	@media (max-width: 900px) {
-		font-size: 5vh;
+		font-size: 6vh;
+		@media (max-height: 1000px) {
+			font-size: 8vh;
+		}
+	}
+}
+
+.shortcuts {
+	div {
+		@media (max-width: 900px) {
+			padding-top: 15%;
+			@media (max-height: 1000px) {
+				padding-top: unset;
+			}
+		}	
 	}
 }
 
@@ -314,20 +328,55 @@ header {
 	align-items: flex-end;
 	@media (max-width: 900px) {
 		flex-direction: column;
-		height: 33vh;
+		height: 40vh;
+		clip-path: polygon(0 0%, 100% 20%, 100% 100%, 48% 100%, 0 100%);
+		display: flex; 
+		justify-content: space-evenly;
+		align-items: flex-start;
 	}
 
 	div {
 		display: flex; 
-		align-items: flex-start; 
+		align-content: flex-start; 
 		justify-content: space-between;
 		padding-bottom: 40px;
+
+		@media (max-width: 900px) {
+			display: unset; 
+			align-content: unset; 
+			justify-content: unset;
+			padding: 0;
+		}
+	}
+
+	.Divleft {
+		@media (max-width: 900px) {
+			padding: 0;
+			padding-left: 25px !important;
+			display: flex;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+
+			a {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.Divright {
+		@media (max-width: 900px) {
+			display: flex;
+			justify-content: flex-end;
+			padding-left: 50vw !important;
+			padding-right: 0 !important;
+			flex-wrap: wrap;
+		}
 	}
 
 	h3 {
 		color: var(--cream, #FFFCF3);
 		font-family: Syne;
-		font-size: min(max(1px, 12vw), 7rem);
+		font-size: 6vw;
 		font-style: normal;
 		font-weight: 800;
 		line-height: 100%; /* 78px */
@@ -336,23 +385,26 @@ header {
 		display: contents;
 
 
+		@media (max-height: 500px) {
+			font-size: 10vw;
+		}
+
 		@media (max-width: 900px) {
-			animation-name: color ;
-			animation-duration: 2s;
+
+			font-size: 12vw;
+			animation-name: color-header;
+			animation-duration: 3s;
 			animation-iteration-count: infinite;
 
-			@keyframes color {
-				10% {
-					color: #000;
-				}
-				20% {
+			@keyframes color-blink-white {
+				0% {
 					color: #5988FF;
 				}
-				90% {
-					color: #5988FF;
+				50% {
+					color: #82a6ff;
 				}
 				100% {
-					color: #000;
+					color: #ffffff;
 				}
 			}
 		}
@@ -364,7 +416,7 @@ header {
 	a {
 		color: var(--cream, #FFFCF3);
 		font-family: Overpass;
-		font-size: 2rem;
+		font-size: 1rem;
 		text-align: left;
 		font-weight: 300;
 		letter-spacing: -0.575px;
@@ -398,7 +450,6 @@ header {
 
 .hello-box {
 	div:last-child{
-		display: inline-flex;
 		height: 40px;
 		align-items: center;
 		gap: 5vw;

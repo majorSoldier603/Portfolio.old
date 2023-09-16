@@ -26,23 +26,19 @@ section {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
-			animation-name: color;
-			animation-duration:3s;
+			animation-name: color-blink-black;
+			animation-duration: 2s;
 			animation-iteration-count: infinite;
 
-			@keyframes color {
-				10% {
-					color: #000;
-				}
-				20% {
+			@keyframes color-blink-black {
+				0% {
 					color: #5988FF;
 				}
-				90% {
-					color: #5988FF;
+				50% {
+					color: #6993ff;
 				}
 				100% {
-					color: #000;
+					color: #000000;
 				}
 			}
 		}

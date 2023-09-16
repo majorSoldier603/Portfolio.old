@@ -37,24 +37,9 @@
 			padding-left: 16px;
 			padding-right: 16px;
 			font-size: 47px;
-			animation-name: color;
+			animation-name: color-blink-black;
 			animation-duration:3s;
 			animation-iteration-count: infinite;
-
-			@keyframes color {
-				10% {
-					color: #000;
-				}
-				20% {
-					color: #5988FF;
-				}
-				90% {
-					color: #5988FF;
-				}
-				100% {
-					color: #000;
-				}
-			}
 		}
 
 		@media (max-width:580px) {

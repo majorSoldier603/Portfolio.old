@@ -51,16 +51,29 @@ $base: 0.6rem;
 	align-items: center;
 	width: 92vw;
 
+	position: relative;
+    border: 0px solid red;
+    display: inline-block;
+    height: 400px;
+    min-width: 30px;
+
 	span {
 		color: var(--black, #000);
 		font-family: Overpass;
 		font-size: 23px;
 		font-style: normal;
 		font-weight: 300;
-		line-height: 100%; /* 23px */
 		letter-spacing: -0.575px;
-		transform: rotate(-90deg);
 		margin: 0;
+		text-align: center;
+		overflow: hidden;
+		height: 30px;
+		line-height: 100%; /* 23px */
+		width: 400px;
+		position: absolute;
+		bottom: -32px;
+		transform: rotate(-90deg);
+		transform-origin: top left;
 	}
 
 	h2 {
@@ -74,6 +87,11 @@ $base: 0.6rem;
 		letter-spacing: -0.575px;
 		padding-top: 300px;
 		transform: rotate(0deg);
+	}
+
+	.ihatecsscalsses {
+		position: absolute;
+		right: 0px;
 	}
 
 
