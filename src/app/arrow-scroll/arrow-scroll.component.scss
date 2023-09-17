@@ -24,6 +24,19 @@ div {
 				left: 35vw;
 			}
 		}
+
+		@keyframes slide2 {
+			0%,
+			100% {
+			  transform: translate(0, 0) rotate(45deg);
+			}
+		  
+			50% {
+			  transform: translate(10px, 10px) rotate(45deg);
+			}
+		}
+
+		  
 		
 		.arrow {
 			transform: rotate(315deg) !important;
