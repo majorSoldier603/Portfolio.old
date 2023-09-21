@@ -3,11 +3,11 @@
 .long-arrow-right,
 .long-arrow-left {
 	display: block;
-	margin: 30px auto;
+	margin: 15% auto;
 	width: 25px;
 	height: 25px;
-	border-top: 2px solid #000;
-	border-left: 2px solid #000;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
 }
 
 .arrow-right,
@@ -24,10 +24,10 @@
 .long-arrow-left::after {
 	content: "";
 	display: block;
-	width: 2px;
+	width: 1px;
 	height: 45px;
 	background-color: black;
-	transform: rotate(-45deg) translate(15px, 4px);
+	transform: rotate(-45deg) translate(15.4px, 6px);
 	left: 0;
 	top: 0;
 }
