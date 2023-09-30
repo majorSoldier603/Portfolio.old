@@ -11,6 +11,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
 import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { ArrowPointerComponent } from './arrow-pointer/arrow-pointer.component';
 
 @NgModule({
 	declarations: [
@@ -23,6 +24,7 @@ import { ContactComponent } from './contact/contact.component';
 	 ProjectListComponent,
 	 ProjectPreviewComponent,
   ContactComponent,
+  ArrowPointerComponent,
 	],
 	imports: [
 		BrowserModule,

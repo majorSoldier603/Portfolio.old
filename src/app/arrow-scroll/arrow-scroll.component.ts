@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-arrow-scroll',
@@ -6,7 +6,18 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./arrow-scroll.component.scss']
 })
 export class ArrowScrollComponent implements OnInit {
+	@Input() project:any = {
 
+		title: '',
+		img: '',
+		Link: '',
+		techstack: '',
+		gitHubLink: '',
+		tldr: '',
+		bntname: ''
+	};
+
+	@Input() projectId = 0;
 	constructor() { }
 
 	ngOnInit() {

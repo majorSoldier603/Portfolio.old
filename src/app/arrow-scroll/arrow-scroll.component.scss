@@ -66,5 +66,49 @@
 		transform: rotate(-45deg) translate(7.9375rem, 3rem);
 		left: 0;
 		top: 0;
+
+		animation: slide1 1s ease-in-out infinite ;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	
+		@keyframes slide1 {
+			0% {
+				transform: rotate(-45deg) translate(7.9375rem, 3rem);
+				height: 23rem;
+			}
+		  
+			50% {
+				transform: rotate(-45deg) translate(12.7rem, 5rem);
+				height: 37rem;
+			}
+	
+			100% {
+				transform: rotate(-45deg) translate(7.9375rem, 3rem);
+				height: 23rem;
+			}
+		}
+
+
+		/**	500ms animation	
+		animation: slide1 500ms ease-in-out infinite ;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	
+		@keyframes slide1 {
+			0% {
+				transform: rotate(-45deg) translate(7.9375rem, 3rem);
+				height: 23rem;
+			}
+		  
+			50% {
+				transform: rotate(-45deg) translate(9.5rem, 4rem);
+				height: 27rem;
+			}
+	
+			100% {
+				transform: rotate(-45deg) translate(7.9375rem, 3rem);
+				height: 23rem;
+			}
+		}**/
 	}
 }
