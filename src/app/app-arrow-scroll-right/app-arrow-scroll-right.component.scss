@@ -1,7 +1,7 @@
 .buffer {
 	margin: 15dvh 25dvw;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 }
 
 .arrow-right,
@@ -13,6 +13,11 @@
 	height: 10rem;
 	border-top: 0.4rem solid #000;
 	border-left: 0.4rem solid #000;
+
+	@media (max-width: 900px) {
+		width: 5rem;
+		height: 5rem;
+	}
 }
 
 .arrow-right,
@@ -22,7 +27,7 @@
 	
 .arrow-left,
 .long-arrow-left {
-	transform: rotate(270deg) translate(15px, 4px);
+	transform: rotate(180deg) translate(15px, 4px);
 }
 
 .long-arrow-right::after,
@@ -30,7 +35,7 @@
 	content: "";
 	display: block;
 	width: 0.4rem;
-	height: 23rem;
+	height: 0rem;
 	background-color: black;
 	transform: rotate(-45deg) translate(7.9375rem, 3rem);
 	left: 0;
@@ -42,17 +47,35 @@
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 
-	@keyframes slide2 {
-		0% {
-			transform: translate(0, 0);
+	@media (min-width: 900px) {
+		@keyframes slide2 {
+			0% {
+				transform: translate(0, 0);
+			}
+		  
+			50% {
+				transform: translate(160px, 160px);
+			}
+	
+			100% {
+				transform: translate(160px, 160px);
+			}
 		}
-	  
-		50% {
-			transform: translate(-160px, 160px);
-		}
+	}
+	
+	@media (max-width: 900px) {
+		@keyframes slide2 {
+			0% {
+				transform: translate(0, 0);
+			}
 
-		100% {
-			transform: translate(-160px, 160px);
+			50% {
+				transform: translate(120px, 120px);
+			}
+
+			100% {
+				transform: translate(120px, 120px);
+			}
 		}
 	}
 
@@ -61,7 +84,7 @@
 		content: "";
 		display: block;
 		width: 0.4rem;
-		height: 23rem;
+		height: 0rem;
 		background-color: black;
 		transform: rotate(-45deg) translate(7.9375rem, 3rem);
 		left: 0;
@@ -70,24 +93,44 @@
 		animation: slide1 1s ease-in-out infinite ;
 		animation-iteration-count: 1;
 		animation-fill-mode: forwards;
-	
-		@keyframes slide1 {
-			0% {
-				transform: rotate(-45deg) translate(7.9375rem, 3rem);
-				height: 23rem;
-			}
-		  
-			50% {
-				transform: rotate(-45deg) translate(12.7rem, 5rem);
-				height: 37rem;
-			}
-	
-			100% {
-				transform: rotate(-45deg) translate(7.9375rem, 3rem);
-				height: 23rem;
+
+		@media (min-width: 900px) {
+			@keyframes slide1 {
+				0% {
+					transform: rotate(-45deg) translate(7.9375rem, 3rem);
+					height: 23rem;
+				}
+			  
+				50% {
+					transform: rotate(-45deg) translate(12.7rem, 5rem);
+					height: 37rem;
+				}
+		
+				100% {
+					transform: rotate(-45deg) translate(7.9375rem, 3rem);
+					height: 23rem;
+				}
 			}
 		}
-
+		
+		@media (max-width: 900px) {
+			@keyframes slide1 {
+				0% {
+					transform: rotate(-45deg) translate(4.1rem, 1.5rem);
+					height: 12rem;
+				}
+			  
+				50% {
+					transform: rotate(-45deg) translate(6.9rem, 3rem);
+					height: 20rem;
+				}
+		
+				100% {
+					transform: rotate(-45deg) translate(4.1rem, 1.5rem);
+					height: 12rem;
+				}
+			}
+		}
 
 		/**	500ms animation	
 		animation: slide1 500ms ease-in-out infinite ;

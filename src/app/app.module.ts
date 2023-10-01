@@ -6,12 +6,12 @@ import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
-import { ArrowScrollComponent } from './arrow-scroll/arrow-scroll.component';
+import { ArrowScrollLeftComponent } from './arrow-scroll-left/arrow-scroll-left.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
 import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
-import { ArrowPointerComponent } from './arrow-pointer/arrow-pointer.component';
+import { AppArrowScrollRightComponent } from './app-arrow-scroll-right/app-arrow-scroll-right.component';
 
 @NgModule({
 	declarations: [
@@ -20,11 +20,11 @@ import { ArrowPointerComponent } from './arrow-pointer/arrow-pointer.component';
 		HeroComponent,
   		AboutMeComponent,
 	 MySkillsComponent,
-	 ArrowScrollComponent,
+	 ArrowScrollLeftComponent,
 	 ProjectListComponent,
 	 ProjectPreviewComponent,
   ContactComponent,
-  ArrowPointerComponent,
+  AppArrowScrollRightComponent,
 	],
 	imports: [
 		BrowserModule,
