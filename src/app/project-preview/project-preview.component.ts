@@ -19,37 +19,20 @@ export class ProjectPreviewComponent implements OnInit {
 
 	@Input() projectId = 0;
 
-	ngOnInit(): void {
-		this.fadeInOut(true)
-		
-		console.log(document.getElementById('1'));
-		let projectIdarr = this.projectId.toString()
-		console.log('this.projectId: ', projectIdarr, projectIdarr);
-	}
-	
-	fadeInOut(isFadeOut:boolean) {
-		const element = document.querySelector('fade-in-out');
-		if (element) {
-			if (isFadeOut) {
-				element.classList.add('fade-out');
-			} else {
-				element.classList.remove('fade-out');
+	ngOnInit() {}
+
+	constructor() {}
+
+	hover(elementID:number, state:boolean) {
+		console.log('hovering over element ' + elementID + ' with state ' + state);
+		if (state) {
+			const elementRef = document.getElementById(elementID.toString());
+			if (elementRef) {
+				console.log(elementRef)
+				//elementRef.className = '';
 			}
-		}
-	}
-
-	bgColor: string = 'FFFCF3';
-	textColor: string = 'black';
-
-	changeBntColor(isBlack:boolean) {
-		console.log(isBlack, this.textColor)
-		if (isBlack) {
-			this.bgColor = 'black';
-			this.textColor = 'white';
-
 		} else {
-			this.bgColor = '#FFFCF3';
-			this.textColor = 'black';
+			
 		}
 	}
 }

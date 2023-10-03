@@ -40,6 +40,11 @@
 						position: absolute;
 						top: 42%;
 						left: -2.3vw;
+						transition: transform 1s;
+					}
+
+					.lol {
+						transform: rotate(-0.38turn);
 					}
 				}
 			}
@@ -220,8 +225,10 @@
 	transition: grayscale(0%) ease-in-out;
 	border: 5px solid #000 !important;
 
+
 }
   
 .fade-in-out.fade-out {
 	opacity: 0;
+	display: none;
 }
