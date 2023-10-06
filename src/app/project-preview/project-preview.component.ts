@@ -28,11 +28,10 @@ export class ProjectPreviewComponent implements OnInit {
 		if (state) {
 			const elementRef = document.getElementById(elementID.toString());
 			if (elementRef) {
-				console.log(elementRef)
-				//elementRef.className = '';
+				elementRef.className = 'right-hover';
+			} else if (elementRef) {
+				//elementRef.className = 'right';
 			}
-		} else {
-			
-		}
+		} else {}
 	}
 }

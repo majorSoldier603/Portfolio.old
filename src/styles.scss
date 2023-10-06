@@ -3,3 +3,7 @@ body {
 	margin: 0;
 	background: var(--cream, #FFFCF3);
 }
+
+.stop-scrolling {
+	overflow: hidden;
+}
