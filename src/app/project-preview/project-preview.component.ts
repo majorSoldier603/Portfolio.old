@@ -18,20 +18,29 @@ export class ProjectPreviewComponent implements OnInit {
 	};
 
 	@Input() projectId = 0;
+	side: string | undefined;
 
 	ngOnInit() {}
 
 	constructor() {}
 
-	hover(elementID:number, state:boolean) {
-		console.log('hovering over element ' + elementID + ' with state ' + state);
-		if (state) {
-			const elementRef = document.getElementById(elementID.toString());
-			if (elementRef) {
-				elementRef.className = 'right-hover';
-			} else if (elementRef) {
-				//elementRef.className = 'right';
-			}
-		} else {}
+	hoverin(elementID:number) {
+		this.wichsideishoverd(elementID);	
+		let elementRef = document.getElementById(elementID.toString());	
+		if (elementRef) {
+			elementRef.className = this.side + '-hover';	
+		}
+	}
+
+	hoverout(elementID:number) {
+		this.wichsideishoverd(elementID)
+		let elementRef = document.getElementById(elementID.toString());
+		if (elementRef) {
+			elementRef.className = this.side || '';
+		}
+	}
+
+	wichsideishoverd(elementID:number) {
+		this.side = elementID % 2 === 0 ? 'right' : 'left';
 	}
 }
