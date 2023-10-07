@@ -45,5 +45,4 @@ export class ProjectPreviewComponent implements OnInit {
 	wichsideishoverd(elementID:number) {
 		this.side = elementID % 2 === 0 ? 'right' : 'left';
 	}
-
 }
