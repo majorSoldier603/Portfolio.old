@@ -9,7 +9,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { ArrowScrollLeftComponent } from './arrow-scroll-left/arrow-scroll-left.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { AppArrowScrollRightComponent } from './app-arrow-scroll-right/app-arrow-scroll-right.component';
 
@@ -29,7 +29,8 @@ import { AppArrowScrollRightComponent } from './app-arrow-scroll-right/app-arrow
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		FormsModule
+		FormsModule,
+		ReactiveFormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

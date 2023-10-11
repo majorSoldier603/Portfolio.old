@@ -1,1 +1,6 @@
-y<p>contact works!</p>
+<form (submit)="sendMail()" ngNativeValidate #AFrom id="myForm">
+    <input required type="text" #name>
+    <input required type="email" #email>
+    <textarea required type="text" #msg></textarea>
+    <button #submitbnt>lol</button>
+</form>
