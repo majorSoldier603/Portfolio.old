@@ -25,7 +25,7 @@ export class ProjectPreviewComponent implements OnInit {
 	constructor() {}
 
 	hoverin(elementID:number) {
-		this.wichsideishoverd(elementID);	
+		this.whichsideishoverd(elementID);	
 		let elementRef = document.getElementById(elementID.toString());	
 		if (elementRef) {
 			elementRef.className = this.side + '-hover' + ' ' + this.side;	
@@ -33,14 +33,14 @@ export class ProjectPreviewComponent implements OnInit {
 	}
 
 	hoverout(elementID:number) {
-		this.wichsideishoverd(elementID)
+		this.whichsideishoverd(elementID)
 		let elementRef = document.getElementById(elementID.toString());
 		if (elementRef) {
-			elementRef.className = this.side || '';
+			elementRef.className = this.side || '';'/'
 		}
 	}
 
-	wichsideishoverd(elementID:number) {
+	whichsideishoverd(elementID:number) {
 		this.side = elementID % 2 === 0 ? 'right' : 'left';
 	}
 }
