@@ -17,19 +17,35 @@ export class ContactComponent {
 		
 	ngOnInit(): void { }
 
-	sendMail() {
+	async sendMail() {
 		console.log("Sending Mail");
+
 		this.fromElements = document.getElementById('myForm');
-		let fd = new FormData(this.AFrom.nativeElement); 
-		this.msg.nativeElement
 		this.disenabelXD(true);
+
+		let nameField = this.name.nativeElement
+		let emailField = this.email.nativeElement
+		let msgField = this.msg.nativeElement
+
+		let fd = new FormData(); 
+		fd.append('name', nameField.value)
+		fd.append('email', emailField.value);
+		fd.append('msg', msgField.value);
+		await fetch('https://maximilian-stark.developerakademie.net/send_mail/send_mail.php',
+			{
+				method: 'POST',
+				body: fd
+			}
+		)
+
+		this.disenabelXD(false);
 	}
 
 	disenabelXD(is: boolean) {
 		if (this.fromElements) {
 			this.fromElements.childNodes.forEach(element => {
 				(element as HTMLInputElement).disabled = is;
-			});	
+			});
 		}
 	}
 }

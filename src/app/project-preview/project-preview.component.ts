@@ -28,7 +28,7 @@ export class ProjectPreviewComponent implements OnInit {
 		this.wichsideishoverd(elementID);	
 		let elementRef = document.getElementById(elementID.toString());	
 		if (elementRef) {
-			elementRef.className = this.side + '-hover';	
+			elementRef.className = this.side + '-hover' + ' ' + this.side;	
 		}
 	}
 
