@@ -4,12 +4,11 @@
 			<div>
 				<img src="assets/project-list/{{ project.img }}">
 				<div>
-					<img class="lul" src="assets/my-skills/cyrcle-arrow.svg">
+					<img src="assets/my-skills/cyrcle-arrow.svg">
 				</div>
 			</div>
 		</a>
 		<span>
-			<h1>{{ projectId }}/05</h1>
 			<h3>{{ project.title }}</h3>
 			<h4>{{ project.techstack }}</h4>
 			<p>{{ project.tldr }}</p>
@@ -17,5 +16,6 @@
 				<a [href]="project.gitHubLink">{{ project.bntname }}</a>
 			</div>
 		</span>
+		<h1>{{ projectId }}/05</h1>
 	</main>
 </section>
