@@ -1,5 +1,6 @@
 <section class="" [class.left]="projectId % 2 !== 0" [class.right]="projectId % 2 === 0" [id]="projectId" (mouseenter)="hoverin(projectId)" (mouseleave)="hoverout(projectId)">
 	<main>
+		<h2>{{ projectId }}/05</h2>
 		<a [href]="project.Link" target="_blank" rel="noopener noreferrer">
 			<div>
 				<img src="assets/project-list/{{ project.img }}">

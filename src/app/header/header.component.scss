@@ -239,21 +239,21 @@ header {
 		.about {
 			&::before {
 				bottom: -45%;
-				left: -10%;
+				left: -5%;
 			}
 
 			&::after {}
 
 			&:hover::after {
 				width: 118%;
-				right: -10%;
+				right: -13%;
 			}
 		}
 
 		.skills {
 			&::before {
 				bottom: -45%;
-				left: -22%;
+				left: -15%;
 			}
 
 			&::after {
@@ -262,14 +262,14 @@ header {
 
 			&:hover::after {
 				width: 142%;
-				right: -22%;
+				right: -27%;
 			}
 		}
 
 		.portfolio {
 			&::before {
 				bottom: -45%;
-				left: -20%;
+				left: -13%;
 			}
 
 			&::after {
@@ -278,7 +278,7 @@ header {
 
 			&:hover::after {
 				width: 140%;
-				right: -22%;
+				right: -27%;
 			}
 		}
 
