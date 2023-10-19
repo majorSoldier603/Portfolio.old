@@ -5,13 +5,15 @@ import { Component } from '@angular/core';
 	templateUrl: './header.component.html',
 	styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent { 
-	body = document.querySelector('body');
-	targetElement = document.getElementById('mainbody');
-
+export class HeaderComponent {
 	toggelScroll() {
-		if (this.targetElement) {
-			this.targetElement.classList.toggle('stop-scrolling');
+		document.getElementById('mainbody')?.classList.toggle('stop-scrolling');
+		console.log(document.getElementById('header-sec')?.classList.contains('d-none'));
+		if (!document.getElementById('header-sec')?.classList.contains('d-none')) {
+			setTimeout(() => {
+				document.getElementById('header-sec')?.classList.add('d-none');
+			}, 100);
 		}
+		document.getElementById('header-sec')?.classList.remove('d-none');
 	}
 }
