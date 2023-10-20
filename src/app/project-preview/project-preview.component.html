@@ -9,14 +9,16 @@
 				</div>
 			</div>
 		</a>
-		<span>
-			<h3>{{ project.title }}</h3>
-			<h4>{{ project.techstack }}</h4>
-			<p>{{ project.tldr }}</p>
-			<div type="button">
-				<a [href]="project.gitHubLink">{{ project.bntname }}</a>
-			</div>
-		</span>
+		<div style="">
+			<span>
+				<h3>{{ project.title }}</h3>
+				<h4>{{ project.techstack }}</h4>
+				<p>{{ project.tldr }}</p>
+				<div type="button">
+					<a [href]="project.gitHubLink">{{ project.bntname }}</a>
+				</div>
+			</span>
+		</div>
 		<h1>{{ projectId }}/05</h1>
 	</main>
 </section>
