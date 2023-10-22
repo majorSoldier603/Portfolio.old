@@ -99,8 +99,6 @@
 			transform: translateX(100%);
 			@media (min-width:900px) {
 				max-width: 100%;
-				overflow-x: hidden; 
-				padding: 10px;
 			}
 			opacity: 0;
 			transition: all 0.5s ease-out;

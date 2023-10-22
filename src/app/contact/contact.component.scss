@@ -14,9 +14,14 @@
 		font-weight: 800;
 		line-height: 100%; /* 45px */
 		letter-spacing: 0.45px;
-		padding-left: 1.5625rem;
+		padding-left: 6.5rem;
 		padding-bottom: 2.125rem;
 		padding-top: 15rem;
+
+		@media (max-width: 900px) {
+			padding-left: 1.5625rem;
+
+		}
 
 
 		@media (max-width: 900px) {
@@ -85,7 +90,7 @@
 
 	input[type=text], [type=email], select, textarea {
 		width: 70vw;
-		padding: 12px;
+		padding: 0.75rem;
 		border: none;
 		border-bottom: 1px solid white;
 		box-sizing: border-box;
@@ -97,6 +102,13 @@
 		border: 3px solid blue;
 	}:active {
 		border: 3px solid blue;
+	}::placeholder {
+		color: var(--cream, #FFFCF3);
+		font-family: Overpass;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%; /* 19.2px */
 	}
 
 	button {
