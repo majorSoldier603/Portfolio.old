@@ -85,13 +85,13 @@ $base: 0.6rem;
 		font-weight: 300;
 		line-height: 100%; /* 23px */
 		letter-spacing: -0.575px;
-		padding-top: 300px;
 		transform: rotate(0deg);
 	}
 
 	.ihatecsscalsses {
 		position: absolute;
 		right: 0px;
+		overflow: hidden;
 	}
 
 
@@ -102,8 +102,8 @@ $base: 0.6rem;
 	transform: scale(var(--ggs,1));
 	width: 22px;
 	height: 22px;
-	opacity: 0;
-	animation: move-arrow 3s ease-out infinite;
+	margin-left: 4px;
+	animation: move-arrow 1.5s ease-in-out infinite;
 }
 .arrow-down::after,
 .arrow-down::before {
@@ -129,23 +129,12 @@ $base: 0.6rem;
 }
 
 @keyframes move-arrow {
-		10% {
-			opacity: 0;
-		}
-		20%{
-			opacity: 1;
-		}
-		25% {
-			opacity: 1;
-		}
-		50% {
-			opacity: 1;
-			transform: translateY($base * 10);
+		0% {
+			transform: translateY($base * -10);
 		}
 
 		100% {
-			opacity: 0;
-			transform: translateY($base * 30);
+			transform: translateY($base * 67);
 		}
 	}
 }
