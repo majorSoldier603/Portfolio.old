@@ -4,9 +4,16 @@
     <h3>Say hello! let's discuss your ideas and make it happen</h3>
 
     <form class="contact-form" (submit)="sendMail()" ngNativeValidate #AFrom id="myForm">
-        <input required type="text" #name placeholder="Your name">
-        <input required type="email" #email>
-        <textarea required type="text" #msg></textarea>
+        
+        <input required type="text" #name placeholder="Your Name" name="name">
+        <label for="name">Your Name</label>
+
+        <input required type="email" #email placeholder="Email" name="email">
+        <label for="email">Your Name</label>
+
+        <textarea required type="text" #msg placeholder="Your Massege" name="email"></textarea>
+        <label for="msg"></label>
+
         <button #submitbnt>lol</button>
     </form>
 
