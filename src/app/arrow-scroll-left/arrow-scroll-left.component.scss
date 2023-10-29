@@ -1,6 +1,7 @@
 .buffer {
 	display: flex;
 	justify-content: flex-end;
+	width: 1px;
 }
 
 .specialkid {
@@ -50,29 +51,16 @@
 	animation: slide2 0.3s ease-in-out infinite ;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
-
-	@keyframes slide2 {
-		0% {
-			transform: translate(-30vw, 10vw);
-		}
-
-		100% {
-			transform: translate(-36vw, 15vw);
-		}
-	}
+	width: 375px;
 
 	@media (min-width: 900px) {
 		@keyframes slide2 {
 			0% {
-				transform: translate(0, 0);
-			}
-		  
-			50% {
-				transform: translate(-160px, 160px);
+				transform: translate(-30vw, 10vw);
 			}
 	
 			100% {
-				transform: translate(-160px, 160px);
+				transform: translate(-36vw, 15vw);
 			}
 		}
 	}
@@ -80,15 +68,11 @@
 	@media (max-width: 900px) {
 		@keyframes slide2 {
 			0% {
-				transform: translate(0, 0);
-			}
-		  
-			50% {
-				transform: translate(-120px, 120px);
+				transform: translate(-20vw, 22vw);
 			}
 	
 			100% {
-				transform: translate(-120px, 120px);
+				transform: translate(-42vw, 50vw);
 			}
 		}
 	}
@@ -138,8 +122,8 @@
 				}
 			  
 				50% {
-					transform: rotate(-45deg) translate(6.9rem, 3rem);
-					height: 20rem;
+					transform: rotate(-45deg) translate(6.2rem, 2.2rem);
+					height: 18rem;
 				}
 		
 				100% {
