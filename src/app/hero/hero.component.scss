@@ -52,10 +52,10 @@ $base: 0.6rem;
 	width: 92vw;
 
 	position: relative;
-    border: 0px solid red;
-    display: inline-block;
-    height: 400px;
-    min-width: 30px;
+	border: 0px solid red;
+	display: inline-block;
+	height: 400px;
+	min-width: 30px;
 
 	span {
 		color: var(--black, #000);
@@ -91,9 +91,17 @@ $base: 0.6rem;
 	.ihatecsscalsses {
 		position: absolute;
 		right: 0px;
-		overflow: hidden;
-	}
 
+
+		div {
+			height: 346px;
+			
+			@media (max-width: 900px) {
+				height: 260px;
+			}
+		}
+	}
+}
 
 .arrow-down {
 	box-sizing: border-box;
@@ -116,36 +124,42 @@ $base: 0.6rem;
 .arrow-down::after {
 	width: 40px;
 	height: 40px;
-	border-bottom: 2px solid;
-	border-left: 2px solid;
+	border-bottom: 4px solid;
+	border-left: 4px solid;
 	transform: rotate(-45deg);
 	left: 3px;
 }
 .arrow-down::before {
-	width: 2px;
+	width: 4px;
 	height: 8vh;
+	@media (max-width: 900px) {
+		height: 16vh;
+	}
 	left: 22px;
 	background: currentColor;
 }
 
-@keyframes move-arrow {
+
+@media (min-width: 900px) {
+	@keyframes move-arrow {
 		0% {
-			transform: translateY($base * -10);
+			transform: translateY($base * -50);
 		}
 
 		100% {
-			transform: translateY($base * 67);
+			transform: translateY($base * 30);
 		}
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 900px) {
+	@keyframes move-arrow {
+		0% {
+			transform: translateY($base * -30);
+		}
+	
+		100% {
+			transform: translateY($base * 20);
+		}
+	}
+}
