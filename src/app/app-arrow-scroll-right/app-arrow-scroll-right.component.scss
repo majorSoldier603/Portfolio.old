@@ -46,15 +46,16 @@
 	animation: slide5 0.3s ease-in-out infinite ;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
+	width: 375px;
 
 	@media (min-width: 900px) {
 		@keyframes slide5 {
 			0% {
-				transform: translate(-30vw, 10vw);
+				transform: translate(20vw, 0vw);
 			}
 	
 			100% {
-				transform: translate(-36vw, 15vw);
+				transform: translate(36vw, 10vw);
 			}
 		}
 	}
