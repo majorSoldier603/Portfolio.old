@@ -18,12 +18,12 @@
 		padding-left: 6.5rem;
 		padding-bottom: 2.125rem;
 		padding-top: 15rem;
-
+		transition: color 125ms ease-in-out;
+		
 		@media (max-width: 900px) {
 			padding-left: 1.5625rem;
 
 		}
-
 
 		@media (max-width: 900px) {
 			font-size: 10vw;
@@ -46,6 +46,8 @@
 			}
 		}
 		margin: 0;
+	}:hover {
+		color: #6993ff;
 	}
 
 	h2 {
@@ -60,10 +62,12 @@
 		padding-left: 1.5625rem;
 		padding-right: 1.5625rem;
 		padding-bottom: 1.1875rem;
-
+		
 		@media (max-width: 900px) {
 			font-size: 7vw;
 		}
+	}:hover {
+		color: #FFFCF3;
 	}
 
 	h3 {
@@ -81,6 +85,8 @@
 		@media (max-width: 900px) {
 			font-size: 6vw;
 		}
+	}:hover {
+		color: red;
 	}
 }
 
@@ -110,7 +116,7 @@
 	}*/
 
 	input[type=text], [type=email], select, textarea {
-		width: 70vw;
+		width: 60vw;
 		padding: 0.75rem;
 		border: none;
 		border-bottom: 1px solid white;

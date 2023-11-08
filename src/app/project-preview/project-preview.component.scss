@@ -452,3 +452,9 @@
 		*/
 	}
 }
+
+.owhmax900 {
+	@media (max-width: 900px) {
+		overflow-x: hidden;	
+	}
+}
