@@ -34,4 +34,16 @@ export class AboutMeComponent implements OnInit {
 			this.textColor = 'black';
 		}
 	}
+
+	scrollToContact() {
+		const element = document.getElementById("myForm");
+		if (element) {
+			console.log('element: ', element);
+			element.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+				inline: "nearest"
+			});
+		}
+	}
 }

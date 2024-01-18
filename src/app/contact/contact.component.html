@@ -1,23 +1,28 @@
 <section class="contact-sec">
-    <div class="">
-        <h1>Say hi!</h1>
-        <h2>Want to discuss a new project?</h2>
-        <h3>Say hello! let's discuss your ideas and make it happen</h3>
-    </div>
+	<div>
+		<h1 class="h1consec32">Say hi!</h1>
+		<h2>Want to discuss a new project?</h2>
+		<h3>Say hello! let's discuss your ideas and make it happen</h3>
+	</div>
 
-    <form class="contact-form" (submit)="sendMail()" ngNativeValidate #AFrom id="myForm">
-        
-        <input required type="text" #name placeholder="Your Name" name="name">
-        <label for="name">Your Name</label>
+	<form class="contact-form" (submit)="sendMail()" ngNativeValidate #AFrom id="myForm">
+		
+		<div>
+			<h1 for="name" class="none">Your Name</h1>
+			<input required [type]="name" #name placeholder="Your Name" name="name" onvalid class="inName">
+		</div>
 
-        <input required type="email" #email placeholder="Email" name="email">
-        <label for="email">Your Name</label>
+		<div>
+			<h1 for="email" class="none">Your email</h1>
+			<input required [type]="email" #email placeholder="Your Email" name="email">
+		</div>
 
-        <textarea required type="text" #msg placeholder="Your Massege" name="email"></textarea>
-        <label for="msg"></label>
-
-        <button #submitbnt>lol</button>
-    </form>
+		<div>
+			<h1 for="email" class="none">Your Message</h1>
+			<textarea required type="text" #msg placeholder="Your Massege" name="email"></textarea>
+		</div>
+		<button #submitbnt>lol</button>
+	</form>
 
 </section>
 
@@ -38,10 +43,10 @@
 
 
 <!--
-        <form (submit)="sendMail()" ngNativeValidate #AFrom id="myForm">
-        <input required type="text" #name>
-        <input required type="email" #email>
-        <textarea required type="text" #msg></textarea>
-        <button #submitbnt>lol</button>
-        </form>
+		<form (submit)="sendMail()" ngNativeValidate #AFrom id="myForm">
+		<input required type="text" #name>
+		<input required type="email" #email>
+		<textarea required type="text" #msg></textarea>
+		<button #submitbnt>lol</button>
+		</form>
 -->

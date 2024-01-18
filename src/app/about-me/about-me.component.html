@@ -4,7 +4,7 @@
 	<div>
 		<main>
 			<h2>I am a Front-end developer based in North Rhine-Westphalia, Germany. I enjoy helping designers and companies bring their ideas into real life.  I am looking forward to continuing my developer career with a job in a junior web developer position. <br><br> If you think I’d be a good match for your projects, contact me!</h2>
-			<button (mousedown)="changeBntColor(true)" (mouseup)="changeBntColor(false)" [ngStyle]="{ 'background-color': bgColor }" type="button"><a href="" [ngStyle]="{ 'color': textColor }">Let’s talk</a></button>
+			<button id="app-about-me-bnt" (mousedown)="changeBntColor(true)" (mouseup)="changeBntColor(false); scrollToContact()" [ngStyle]="{ 'background-color': bgColor }" type="button"><a [ngStyle]="{ 'color': textColor }">Let’s talk</a></button>
 		</main>
 
 
