@@ -14,58 +14,6 @@
 	}
 	background-color: #000000;
 
-	.h1consec32 {
-		color: var(--cream, #FFFCF3);
-		text-align: left;
-		font-family: Syne;
-		font-size: 7.22vw;
-		font-style: normal;
-		font-weight: 800;
-		line-height: 100%; /* 45px */
-		letter-spacing: 0.45px;
-		padding-left: 6.5rem;
-		padding-bottom: 2.125rem;
-		padding-top: 15rem;
-		transition: color 125ms ease-in-out;
-		
-		@media (max-width: 900px) {
-			padding-left: 1.5625rem;
-	
-		}
-	
-		@media (max-width: 900px) {
-			font-size: 10vw;
-			padding-left: 3rem;
-			animation-name: color-blink-wite;
-			animation-duration: 2s;
-			animation-iteration-count: infinite;
-			padding-top: 5rem;
-	
-			@keyframes color-blink-wite {
-				0% {
-					color: #5988FF;
-				}
-				50% {
-					color: #6993ff;
-				}
-				100% {
-					color: #FFFCF3;
-				}
-			}
-		}
-		margin: 0;
-	}:hover {
-
-		label {
-			border: none !important;
-			padding: 0 !important;
-			color: white !important;
-			margin: 0 !important;
-			outline: none !important;
-		}
-		color: #ff5959; 
-	}
-
 	h2 {
 		color: var(--style-2-style-2-blue-blue, #5988FF);
 		text-align: center;
@@ -166,8 +114,55 @@
 			border: 2.5px solid white;
 			padding: 1.4rem ;
 			outline: none;
-			
-
 		}
 	}
+}
+
+.h1consec32 {
+	color: var(--cream, #FFFCF3);
+	text-align: left;
+	font-family: Syne;
+	font-size: 7.22vw;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 100%; /* 45px */
+	inline-size: fit-content;
+	letter-spacing: 0.45px;
+	padding-left: 6.5rem;
+	padding-bottom: 2.125rem;
+	padding-top: 15rem;
+	transition: color 125ms ease-in-out;
+	
+	@media (max-width: 900px) {
+		padding-left: 1.5625rem;
+
+	}
+
+	@media (max-width: 900px) {
+		font-size: 10vw;
+		padding-left: 3rem;
+		animation-name: color-blink-wite;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		padding-top: 5rem;
+
+		@keyframes color-blink-wite {
+			0% {
+				color: #5988FF;
+			}
+			50% {
+				color: #6993ff;
+			}
+			100% {
+				color: #FFFCF3;
+			}
+		}
+	}
+	margin: 0;
+}:hover {
+	color: #5988FF;
+}
+
+.active {
+	display: none; 
 }

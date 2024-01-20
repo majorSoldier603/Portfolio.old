@@ -13,9 +13,60 @@ export class ContactComponent {
 @ViewChild('submitbnt') submitbnt!: ElementRef;
 	fromElements: HTMLElement | null | undefined;
 
-	constructor() { }
+	constructor() { 
+
+	}
+	
+	
+	lastActive = ""
+	ngOnInit(): void {
+		this.animations()
 		
-	ngOnInit(): void { }
+	}
+
+	animations() {
+	const appRoot = document.getElementById("app-root");
+		if (appRoot) {
+			appRoot.addEventListener("click", (event) => {this.contactForm()});
+		} else {
+			console.error("contact component appRoot element not found");
+		}
+	}
+
+	contactForm() {
+		if (this.lastActive) {
+			let x = document.getElementById(this.lastActive)?.parentElement?.classList.remove("active")
+			console.log('x: ', x);
+		}
+	}
+	
+	inputFieldClickHandler(event: Event) {
+		event.stopPropagation();
+		console.log(event)
+		if (event.target instanceof Element) {
+			console.log('Clicked element ID:', event.target.id);
+			this.lastActive = event.target.id
+			let nowActive = event.target.id
+
+			this.fieldFade(nowActive)
+		}
+	}
+
+	fieldFade(nowActive: string) {
+		let x = document.getElementById(nowActive)?.parentElement?.classList.add("active")
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	async sendMail() {
 		console.log("Sending Mail");
@@ -47,5 +98,12 @@ export class ContactComponent {
 				(element as HTMLInputElement).disabled = is;
 			});
 		}
+	}
+
+
+
+	gimmeNumber(x:string) {
+		let y: number = +x;
+		return y
 	}
 }
