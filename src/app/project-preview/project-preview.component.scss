@@ -55,6 +55,12 @@
 						@media (max-width: 900px) {
 							left: -6.4vw;
 						}
+						@media (min-width: 2500px) {
+							left: -0.9vw;
+						}
+						@media (min-width: 3400px) {
+							left: -0.5vw;
+						}
 						opacity: 0;
 						scale: 1;
 						transform: rotate(-0turn);
@@ -286,6 +292,12 @@
 						right: -1.3vw;
 						@media (max-width: 900px) {
 							right: -5vw;
+						}
+						@media (min-width: 2500px) {
+							right: -0.9vw;
+						}
+						@media (min-width: 3400px) {
+							right: -0.5vw;
 						}
 						opacity: 0;
 						scale: 1;

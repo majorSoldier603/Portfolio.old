@@ -43,6 +43,9 @@ export class ContactComponent {
 	inputFieldClickHandler(event: Event) {
 		event.stopPropagation();
 		console.log(event)
+		if (this.lastActive) {
+			this.contactForm();
+		}
 		if (event.target instanceof Element) {
 			console.log('Clicked element ID:', event.target.id);
 			this.lastActive = event.target.id
