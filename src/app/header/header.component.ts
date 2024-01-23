@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 	toggelScroll() {
 		document.getElementById('mainbody')?.classList.toggle('stop-scrolling');
+		
 		console.log(document.getElementById('header-sec')?.classList.contains('d-none'));
 		if (!document.getElementById('header-sec')?.classList.contains('d-none')) {
 			setTimeout(() => {
@@ -15,5 +16,17 @@ export class HeaderComponent {
 			}, 100);
 		}
 		document.getElementById('header-sec')?.classList.remove('d-none');
+	}
+
+	scrollToAboutMe() {
+		const element = document.getElementById("app-about-me");
+		if (element) {
+			console.log('element: ', element);
+			element.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+				inline: "nearest"
+			});
+		}
 	}
 }

@@ -1,13 +1,12 @@
 body {
 	margin-top: 16rem;
-
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 
 	button {
 		display: inline-flex;
-		width: 50%;
+		width: 70%;
 		padding: 20px 40px;
 		justify-content: center;
 		align-items: center;
@@ -69,7 +68,6 @@ body {
 		padding: 0;
 	}
 }
-$base: 0.6rem;
 
 .idiot {
 	display: flex;
@@ -119,14 +117,11 @@ $base: 0.6rem;
 	.ihatecsscalsses {
 		position: absolute;
 		right: 0px;
-
+		height: 100%;
 
 		div {
-			height: 346px;
-			
-			@media (max-width: 900px) {
-				height: 260px;
-			}
+			margin-top: 30%;
+			height: 70%;
 		}
 	}
 }
@@ -139,7 +134,7 @@ $base: 0.6rem;
 	width: 22px;
 	height: 22px;
 	margin-left: 4px;
-	animation: move-arrow 1.5s ease-in-out infinite;
+	animation: move-arrow 1.25s ease-in-out infinite;
 }
 .arrow-down::after,
 .arrow-down::before {
@@ -166,16 +161,16 @@ $base: 0.6rem;
 	left: 22px;
 	background: currentColor;
 }
-
+$base: 1%;
 
 @media (min-width: 900px) {
 	@keyframes move-arrow {
 		0% {
-			transform: translateY($base * -50);
+			transform: translateY($base * -150);
 		}
 
 		100% {
-			transform: translateY($base * 30);
+			transform: translateY($base * 150);
 		}
 	}
 }
@@ -183,11 +178,11 @@ $base: 0.6rem;
 @media (max-width: 900px) {
 	@keyframes move-arrow {
 		0% {
-			transform: translateY($base * -30);
+			transform: translateY($base * -150);
 		}
 	
 		100% {
-			transform: translateY($base * 20);
+			transform: translateY($base * 150);
 		}
 	}
 }
