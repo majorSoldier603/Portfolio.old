@@ -1,36 +1,27 @@
-import { Component, ElementRef, ViewChild, asNativeElements } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, asNativeElements } from '@angular/core';
 
 @Component({
 	selector: 'app-contact',
 	templateUrl: './contact.component.html',
 	styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
 @ViewChild('AFrom') AFrom!: ElementRef;
 @ViewChild('name') name!: ElementRef;
 @ViewChild('email') email!: ElementRef;
 @ViewChild('msg') msg!: ElementRef;
 @ViewChild('submitbnt') submitbnt!: ElementRef;
 	fromElements: HTMLElement | null | undefined;
-
-	constructor() { 
-
-	}
-	
+	isChecked: boolean = false;
+	previousState: boolean = false;	
 	
 	lastActive = ""
 	ngOnInit(): void {
 		this.animations()
-		
 	}
 
 	animations() {
-	const appRoot = document.getElementById("app-root");
-		if (appRoot) {
-			appRoot.addEventListener("click", (event) => {this.contactForm()});
-		} else {
-			console.error("contact component appRoot element not found");
-		}
+		document.getElementById("app-root")?.addEventListener("click", (event) => {this.contactForm()});
 	}
 
 	contactForm() {
@@ -58,18 +49,6 @@ export class ContactComponent {
 	fieldFade(nowActive: string) {
 		let x = document.getElementById(nowActive)?.parentElement?.classList.add("active")
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 	async sendMail() {
 		console.log("Sending Mail");
@@ -108,5 +87,41 @@ export class ContactComponent {
 	gimmeNumber(x:string) {
 		let y: number = +x;
 		return y
+	}
+
+	bgColor: string = 'FFFCF3';
+	textColor: string = '#BBBBBB';
+
+	changeBntColor(isHold:boolean) {
+		console.log(isHold, this.textColor, this.bgColor)
+		if (isHold) {
+			this.bgColor = '#FFFCF3';
+			this.textColor = 'black';
+		} else {
+			this.bgColor = 'black';
+			this.textColor = '#FFFCF3';
+		}
+	}
+
+	changeTextColor() {
+		console.log(this.isChecked)
+		if (!this.isChecked) {
+			this.textColor = '#FFFCF3';
+		} else {
+			this.textColor = '#BBBBBB';
+		}
+	}
+
+	displaySwitch: string = 'none';
+	addMargin: string = '10px'
+
+	checkboxChanged() {
+		if (this.isChecked && !this.previousState) {
+			this.displaySwitch = 'none'
+			this.addMargin = '15px'
+		} else if (!this.isChecked && this.previousState) {
+			this.displaySwitch = 'block'
+		}
+		this.previousState = this.isChecked;
 	}
 }

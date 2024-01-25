@@ -120,8 +120,142 @@
 			outline: none;
 		}
 
+	}
+
+	.pr-policy-mailsend-div {
+		width: 60%;
+		display: flex;
+		align-items: center;
+		input {
+			width: 24px;
+			height: 24px;
+			margin: 0;
+			
+			background-color: black;
+			cursor: default;
+			appearance: none;
+			box-sizing: border-box;
+			margin: 3px 3px 3px 4px;
+			padding: initial;
+			border: 3px solid #FFFCF3;
+			border-radius: 5px;
+		}
+
+		span {
+			font-family: Overpass;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 17px;
+			letter-spacing: 0em;
+
+			width: 90%;
+
+			display: flex;
+			border: none;
+			padding: 0;
+
+			&:hover {
+				color: #FFFCF3;
+			}
+
+			p {
+				border: none;
+				margin: 0;
+				padding-left: 7px;
+				padding-right: 7px;
+				color: #5988FF;
+			}
+		}
+
+		label {
+			border: none;
+			padding: 0;
+			color: #E61C40;
+			font-family: Overpass;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 14px;
+			letter-spacing: 0em;
+
+			&:hover {
+				color: #E61C40;
+			}
+		}
+
+		&:hover {
+			input {
+				width: 24px;
+				height: 24px;
+			}
+
+			span {
+				p {
+					font-weight: 700;
+					padding: 0;
+					padding-left: 3.5px;
+					padding-right: 3.5px;
+				}
+			}
+		}
+	}
+
+	.email-div-bnt {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
 		button {
-			border: 4px #FFFCF3;
+
+			width: 30%;
+			padding: 20px 60px;
+
+			gap: 10px;
+			background: black;
+			transition: 0.2s ease-in-out 0s;
+			border: 4px solid #BBBBBB;
+
+			@media (max-width: 900px) {
+				display: none;
+			}
+		
+			a {
+				color: #BBBBBB;
+				font-family: Overpass;
+				font-size: 23px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%; /* 27.6px */
+			}
+
+			&:hover {
+				a {
+					border: none;
+				}
+				border: 4px solid #BBBBBB;
+				padding: 20px 60px;
+			}
+
+			&:not(:disabled):hover {
+				a {
+					font-weight: 700;
+					border: none;
+				}
+		
+				cursor: pointer;
+				transform: scale(1.25, 1);
+			}
+
+			&:not(:disabled) {
+				border: 4px solid #FFFCF3;
+				margin-top: 5px;
+
+				a {
+					color: #FFFCF3;
+				}
+				&:active {
+					transform: scale(1.2, 1);
+				}
+			}
 		}
 	}
 }
