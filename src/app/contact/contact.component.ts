@@ -11,9 +11,11 @@ export class ContactComponent implements OnInit {
 @ViewChild('email') email!: ElementRef;
 @ViewChild('msg') msg!: ElementRef;
 @ViewChild('submitbnt') submitbnt!: ElementRef;
+@ViewChild('emailbnt') appContactEmailBnt!: ElementRef;
 	fromElements: HTMLElement | null | undefined;
 	isChecked: boolean = false;
-	previousState: boolean = false;	
+	previousState: boolean = false;
+	wasUsed: boolean = false;
 	
 	lastActive = ""
 	ngOnInit(): void {
@@ -21,7 +23,7 @@ export class ContactComponent implements OnInit {
 	}
 
 	animations() {
-		document.getElementById("app-root")?.addEventListener("click", (event) => {this.contactForm()});
+		document.getElementById("app-root")?.addEventListener("click", (event) => {this.contactForm(); this.handleDisabledBnt()});
 	}
 
 	contactForm() {
@@ -112,16 +114,24 @@ export class ContactComponent implements OnInit {
 		}
 	}
 
-	displaySwitch: string = 'none';
+	displaySwitch: string = '0';
 	addMargin: string = '10px'
 
 	checkboxChanged() {
+		this.wasUsed = true
 		if (this.isChecked && !this.previousState) {
-			this.displaySwitch = 'none'
+			this.displaySwitch = '0'
 			this.addMargin = '15px'
 		} else if (!this.isChecked && this.previousState) {
-			this.displaySwitch = 'block'
+			this.displaySwitch = '1'
 		}
 		this.previousState = this.isChecked;
+	}
+
+	handleDisabledBnt() {
+		console.log("ll");
+		if (!this.wasUsed && !this.isChecked) {
+			this.displaySwitch = '1'
+		}
 	}
 }

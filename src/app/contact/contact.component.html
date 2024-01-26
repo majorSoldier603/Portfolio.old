@@ -22,14 +22,16 @@
 			<textarea required type="text" #msg placeholder="Your Massege" name="email" id="30"></textarea>
 		</div>
 
-		<div class="pr-policy-mailsend-div">
-			<input type="checkbox" id="app-contact-email-input" [(ngModel)]="isChecked" (change)="checkboxChanged(); changeTextColor()" [ngStyle]="{ 'margin-right': addMargin }" name="contact-email-bnt">
-			<span>I've read the <p>privacy policy</p>and agree to the processing of my data as outlined.</span>
-			<label for="app-contact-email-input" [ngStyle]="{ 'display': displaySwitch }">Please accept the privacy policy.</label>
+		<div class="pr-policy-mailsend-div" id="id-pr-policy-mailsend-div">
+			<input type="checkbox" id="app-contact-email-input" [(ngModel)]="isChecked" (change)="checkboxChanged();" (mousedown)="changeTextColor()"[ngStyle]="{ 'margin-right': addMargin }" name="contact-email-bnt">
+			<span>I've read the <p class="pr-policy-mailsend-div-span-p">privacy policy</p>and agree to the processing of my data as outlined.</span>
+			<label for="app-contact-email-input" [ngStyle]="{ 'opacity': displaySwitch }">Please accept the privacy policy.</label>
 		</div>
 		
-		<div class="email-div-bnt">
-			<button id="app-contact-email-bnt" [disabled]="!isChecked" (mousedown)="changeBntColor(true)" (mouseup)="changeBntColor(false);" [ngStyle]="{ 'background-color': bgColor }" type="button"><a [ngStyle]="{ 'color': textColor }">Let’s talk</a></button>
+		<div class="email-div-bnt" (click)="handleDisabledBnt()">
+			<button id="app-contact-email-bnt" (mousedown)="changeBntColor(true)" (mouseup)="changeBntColor(false);" [ngStyle]="{ 'background-color': bgColor }" type="button" [disabled]="!isChecked">
+				<a [ngStyle]="{ 'color': textColor }">Let’s talk</a>
+				</button>
 		</div>
 	</form>
 </section>
