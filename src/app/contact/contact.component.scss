@@ -228,13 +228,13 @@
 
 	#app-contact-email-input:checked::after {
 		display: block;
-		left: 0.34375rem;
-		top: 0.09375rem;
-		width: 5px;
-		height: 10px;
-		border: solid white;
-		border-width: 0 3px 3px 0;
-		transform: rotate(45deg);
+		left: -1px;
+		top: -1px;
+		width: 1.125rem;
+		height: 1.125rem;
+
+		background-image: url("../../assets/check_box.svg");
+		background-repeat: no-repeat;
 	}
 	  
 
@@ -244,6 +244,9 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
+
+
+
 		button {
 
 			width: 30%;
@@ -297,8 +300,20 @@
 				}
 			}
 		}
+
+		div {
+			position: absolute;
+			width: 30%;
+			height: 100%;
+			padding: 0;
+			&:hover {
+				border: none;
+			}
+		}
 	}
 }
+
+
 
 .h1consec32 {
 	color: var(--cream, #FFFCF3);

@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
 	isChecked: boolean = false;
 	previousState: boolean = false;
 	wasUsed: boolean = false;
-	divz: number = 1;
+	divnone: string = "block";
 	
 	lastActive = ""
 	ngOnInit(): void {
@@ -130,9 +130,10 @@ export class ContactComponent implements OnInit {
 	}
 
 	handleDisabledBnt() {
-		console.log("ll");
+		console.log("ll", this.wasUsed);
 		if (!this.wasUsed && !this.isChecked) {
 			this.displaySwitch = '1'
+			this.divnone = "none"
 		}
 	}
 }
