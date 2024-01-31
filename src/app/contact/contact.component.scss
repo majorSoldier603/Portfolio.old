@@ -133,6 +133,8 @@
 			height: 1.5rem;
 			margin: 0;
 			
+			position: relative;
+
 			background-color: black;
 			cursor: default;
 			appearance: none;
@@ -217,6 +219,24 @@
 			}
 		}
 	}
+
+	#app-contact-email-input::after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	#app-contact-email-input:checked::after {
+		display: block;
+		left: 0.34375rem;
+		top: 0.09375rem;
+		width: 5px;
+		height: 10px;
+		border: solid white;
+		border-width: 0 3px 3px 0;
+		transform: rotate(45deg);
+	}
+	  
 
 	.email-div-bnt {
 		display: flex;

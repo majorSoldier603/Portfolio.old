@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit {
 	isChecked: boolean = false;
 	previousState: boolean = false;
 	wasUsed: boolean = false;
+	divz: number = 1;
 	
 	lastActive = ""
 	ngOnInit(): void {
@@ -23,7 +24,7 @@ export class ContactComponent implements OnInit {
 	}
 
 	animations() {
-		document.getElementById("app-root")?.addEventListener("click", (event) => {this.contactForm(); this.handleDisabledBnt()});
+		document.getElementById("app-root")?.addEventListener("click", (event) => {this.contactForm()});
 	}
 
 	contactForm() {

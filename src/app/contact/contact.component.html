@@ -28,10 +28,11 @@
 			<label for="app-contact-email-input" [ngStyle]="{ 'opacity': displaySwitch }">Please accept the privacy policy.</label>
 		</div>
 		
-		<div class="email-div-bnt" (click)="handleDisabledBnt()">
+		<div class="email-div-bnt" (click)="handleDisabledBnt()" [ngStyle]="{ 'z-index': divz }">
 			<button id="app-contact-email-bnt" (mousedown)="changeBntColor(true)" (mouseup)="changeBntColor(false);" [ngStyle]="{ 'background-color': bgColor }" type="button" [disabled]="!isChecked">
 				<a [ngStyle]="{ 'color': textColor }">Let’s talk</a>
-				</button>
+			</button>
+			<div></div>
 		</div>
 	</form>
 </section>
