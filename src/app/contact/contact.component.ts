@@ -111,7 +111,7 @@ export class ContactComponent implements OnInit {
 		if (!this.isChecked) {
 			this.textColor = '#FFFCF3';
 		} else {
-			this.textColor = '#BBBBBB';
+			this.textColor = '#807f7f';
 		}
 	}
 
