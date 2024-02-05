@@ -117,12 +117,15 @@ export class ContactComponent implements OnInit {
 
 	displaySwitch: string = '0';
 	addMargin: string = '10px'
+	ErrorMargin: string = 'null'
 
 	checkboxChanged() {
 		this.wasUsed = true
 		if (this.isChecked && !this.previousState) {
 			this.displaySwitch = '0'
 			this.addMargin = '15px'
+			console.log("dwadaw");
+			this.ErrorMargin = 'null'
 		} else if (!this.isChecked && this.previousState) {
 			this.displaySwitch = '1'
 		}
@@ -134,6 +137,8 @@ export class ContactComponent implements OnInit {
 		if (!this.wasUsed && !this.isChecked) {
 			this.displaySwitch = '1'
 			this.divnone = "none"
+			this.addMargin = "15px"
+			this.ErrorMargin = '-10px'
 		}
 	}
 

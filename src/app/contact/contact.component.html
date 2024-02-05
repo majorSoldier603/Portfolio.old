@@ -29,8 +29,8 @@
 		</div>
 		
 		<div class="email-div-bnt">
-			<button id="app-contact-email-bnt" (mousedown)="changeBntColor(true)" (mouseup)="changeBntColor(false);" [ngStyle]="{ 'background-color': bgColor }" type="button" [disabled]="!isChecked">
-				<a [ngStyle]="{ 'color': textColor }">Let’s talk</a>*
+			<button id="app-contact-email-bnt" (mousedown)="changeBntColor(true)" (mouseup)="changeBntColor(false);" [ngStyle]="{ 'background-color': bgColor, 'margin-top': ErrorMargin }" type="button" [disabled]="!isChecked">
+				<a [ngStyle]="{ 'color': textColor }">Let’s talk</a>
 			</button>
 			<div (click)="handleDisabledBnt()" [ngStyle]="{ 'display': divnone }"></div>
 		</div>
