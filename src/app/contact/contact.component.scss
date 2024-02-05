@@ -375,3 +375,39 @@
 		opacity: 0 !important;
 	}
 }
+
+.contact-scroll-up {
+	transition: all 0.3s;
+	position: absolute !important;
+	bottom: 10rem;
+	right: 10vw;
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	transform: rotate(45deg);
+	border-top: 0.25rem solid #FFFCF3 !important;
+	border-left: 0.25rem solid #FFFCF3 !important;
+	color: #6993ff;
+	
+	&::after {
+		transition: all 1ms;
+		content: "";
+		display: block;
+		width: 0.3rem;
+		height: 6rem;
+		background-color: #FFFCF3;
+		transform: rotate(-45deg) translate(2rem, 0.6rem);
+		left: 0;
+		top: 0;
+	}
+
+	&:hover {
+		bottom: 13rem;
+
+		&::after {
+			height: 9rem;
+			transform: rotate(-45deg) translate(3.075rem, 1rem);
+
+		}
+	}
+}

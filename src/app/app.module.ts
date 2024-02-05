@@ -12,6 +12,7 @@ import { ProjectPreviewComponent } from './project-preview/project-preview.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { AppArrowScrollRightComponent } from './app-arrow-scroll-right/app-arrow-scroll-right.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
 	declarations: [
@@ -25,6 +26,7 @@ import { AppArrowScrollRightComponent } from './app-arrow-scroll-right/app-arrow
 	 ProjectPreviewComponent,
   ContactComponent,
   AppArrowScrollRightComponent,
+  FooterComponent,
 	],
 	imports: [
 		BrowserModule,

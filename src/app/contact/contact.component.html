@@ -5,7 +5,7 @@
 		<h3>Say hello! let's discuss your ideas and make it happen</h3>
 
 
-	<form class="contact-form" (submit)="sendMail()" ngNativeValidate #AFrom id="myForm">
+	<form class="contact-form" (submit)="sendMail()" ngNativeValidate #AFrom id="myForm" style="position: relative;">
 		
 		<div (click)="inputFieldClickHandler($event)">
 			<h1 for="name" class="none">Your Name</h1>
@@ -30,10 +30,11 @@
 		
 		<div class="email-div-bnt">
 			<button id="app-contact-email-bnt" (mousedown)="changeBntColor(true)" (mouseup)="changeBntColor(false);" [ngStyle]="{ 'background-color': bgColor }" type="button" [disabled]="!isChecked">
-				<a [ngStyle]="{ 'color': textColor }">Let’s talk</a>
+				<a [ngStyle]="{ 'color': textColor }">Let’s talk</a>*
 			</button>
 			<div (click)="handleDisabledBnt()" [ngStyle]="{ 'display': divnone }"></div>
 		</div>
+		<div class="contact-scroll-up"></div>
 	</form>
 </section>
 
