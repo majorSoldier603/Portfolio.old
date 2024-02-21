@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, asNativeElements } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
 	selector: 'app-contact',
@@ -17,6 +17,7 @@ export class ContactComponent implements OnInit {
 	previousState: boolean = false;
 	wasUsed: boolean = false;
 	divnone: string = "block";
+	nowActive:string = "undefined"
 	
 	lastActive = ""
 	ngOnInit(): void {
@@ -24,7 +25,7 @@ export class ContactComponent implements OnInit {
 	}
 
 	animations() {
-		document.getElementById("app-root")?.addEventListener("click", (event) => {this.contactForm()});
+		document.getElementById("app-root")?.addEventListener("click", (event) => {this.contactForm();});
 	}
 
 	contactForm() {
@@ -33,19 +34,24 @@ export class ContactComponent implements OnInit {
 			console.log('x: ', x);
 		}
 	}
+
+	checkOnFlyValidForm() {
+
+	}
 	
 	inputFieldClickHandler(event: Event) {
 		event.stopPropagation();
 		console.log(event)
 		if (this.lastActive) {
 			this.contactForm();
+			this.checkOnFlyValidForm();
 		}
+		
 		if (event.target instanceof Element) {
 			console.log('Clicked element ID:', event.target.id);
 			this.lastActive = event.target.id
-			let nowActive = event.target.id
-
-			this.fieldFade(nowActive)
+			this.nowActive = event.target.id
+			this.fieldFade(this.nowActive);
 		}
 	}
 
