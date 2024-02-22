@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { AppArrowScrollRightComponent } from './app-arrow-scroll-right/app-arrow-scroll-right.component';
 import { FooterComponent } from './footer/footer.component';
+import { SocialiconsComponent } from './socialicons/socialicons.component';
 
 @NgModule({
 	declarations: [
@@ -27,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
   ContactComponent,
   AppArrowScrollRightComponent,
   FooterComponent,
+  SocialiconsComponent,
 	],
 	imports: [
 		BrowserModule,
