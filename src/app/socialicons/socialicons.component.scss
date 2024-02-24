@@ -1,0 +1,17 @@
+.soc-iconsDiv {
+    margin: 42px;
+    transition: all 0.3s;
+    position: relative;
+    bottom: 0rem;
+
+    a {
+        display: inline-block; /* Add this to ensure the anchor is treated as a block-level element */
+        transition: all 0.3s;
+    }
+
+    a:hover img {
+        transition: all 0.3s;
+        position: absolute;
+        bottom: 1rem;
+    }
+}
