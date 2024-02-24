@@ -1,17 +1,17 @@
 .soc-iconsDiv {
+    display: flex;
+    justify-content: space-between;
     margin: 42px;
-    transition: all 0.3s;
+    height: 30px;
     position: relative;
-    bottom: 0rem;
 
-    a {
-        display: inline-block; /* Add this to ensure the anchor is treated as a block-level element */
+    img {
         transition: all 0.3s;
+        bottom: 0;
+        position: absolute;
     }
 
-    a:hover img {
-        transition: all 0.3s;
-        position: absolute;
-        bottom: 1rem;
+    img:hover {
+        bottom: 50px;
     }
 }
