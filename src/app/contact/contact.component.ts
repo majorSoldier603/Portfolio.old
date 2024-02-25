@@ -130,7 +130,7 @@ export class ContactComponent implements OnInit {
 		if (this.isChecked && !this.previousState) {
 			this.displaySwitch = '0'
 			this.addMargin = '15px'
-			console.log("dwadaw");
+			this.divnone = "none"
 			this.ErrorMargin = 'null'
 		} else if (!this.isChecked && this.previousState) {
 			this.displaySwitch = '1'
