@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AppArrowScrollRightComponent } from './app-arrow-scroll-right/app-arrow-scroll-right.component';
 import { FooterComponent } from './footer/footer.component';
 import { SocialiconsComponent } from './socialicons/socialicons.component';
+import { LegaltextanibntComponent } from './legaltextanibnt/legaltextanibnt.component';
 
 @NgModule({
 	declarations: [
@@ -29,6 +30,7 @@ import { SocialiconsComponent } from './socialicons/socialicons.component';
   AppArrowScrollRightComponent,
   FooterComponent,
   SocialiconsComponent,
+  LegaltextanibntComponent,
 	],
 	imports: [
 		BrowserModule,
