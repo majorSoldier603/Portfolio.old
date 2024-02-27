@@ -148,13 +148,8 @@ export class ContactComponent implements OnInit {
 		}
 	}
 
-	onHover() {
-		// Code to execute when the mouse pointer enters the arrow container
-		console.log('Hovered over arrow!');
+	scrollToTop() {
+		
 	}
-	
-	onMouseOut() {
-		// Code to execute when the mouse pointer leaves the arrow container
-		console.log('Mouse out of arrow!');
-	}
+
 }
