@@ -1,0 +1,34 @@
+.footer-sec {
+    padding: 6.25rem;
+    padding-top: 2.125rem;
+    padding-bottom: 2.125rem;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        img {
+            
+        }
+
+        p {
+            color: var(--cream, #FFFCF3);
+            font-family: Poppins;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+
+    section {
+        width: 30%;
+        app-socialicons {
+
+        }
+
+        app-legaltextanibnt {
+
+        }
+    }
+}

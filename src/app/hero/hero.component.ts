@@ -46,5 +46,4 @@ export class HeroComponent implements OnInit {
 			});
 		}
 	}
-
 }
