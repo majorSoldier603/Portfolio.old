@@ -381,8 +381,16 @@
 .contact-scroll-up {
 	transition: all 0.3s;
 	position: absolute !important;
-	bottom: 10rem;
-	right: 10vw;
+	bottom: -3.5rem;
+	right: 5vw;
+
+	a {
+		position: absolute;
+		width: 100px;
+		top: 0px;
+		height: 100px;
+	}
+
 	div {
 		width: 3rem;
 		height: 3rem;
