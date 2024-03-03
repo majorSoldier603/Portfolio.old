@@ -364,6 +364,10 @@ header {
 	}
 
 	.Divright {
+		width: 20%;
+		padding-right: 100px;
+		padding-bottom: 40px;
+		
 		@media (max-width: 900px) {
 			display: flex;
 			justify-content: flex-end;
