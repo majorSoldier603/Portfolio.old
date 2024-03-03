@@ -6,16 +6,19 @@ import { Component } from '@angular/core';
 	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-	toggelScroll() {
-		document.getElementById('mainbody')?.classList.toggle('stop-scrolling');
-		
-		console.log(document.getElementById('header-sec')?.classList.contains('d-none'));
-		if (!document.getElementById('header-sec')?.classList.contains('d-none')) {
+	isChecked:boolean = false
+
+	onCheckboxChange() {
+		console.log(this.isChecked)
+		if (this.isChecked) {
+			document.getElementById('header-sec')?.classList.remove('d-none')
+			document.getElementById('mainbody')?.classList.add('stop-scrolling');
+		} else if (!this.isChecked) {
 			setTimeout(() => {
 				document.getElementById('header-sec')?.classList.add('d-none');
+				document.getElementById('mainbody')?.classList.remove('stop-scrolling');
 			}, 100);
 		}
-		document.getElementById('header-sec')?.classList.remove('d-none');
 	}
 
 	scrollToAboutMe() {
