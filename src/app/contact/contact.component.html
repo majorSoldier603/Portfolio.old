@@ -24,13 +24,13 @@
 
 		<div class="pr-policy-mailsend-div" id="id-pr-policy-mailsend-div">
 			<input type="checkbox" id="app-contact-email-input" [(ngModel)]="isChecked" (change)="checkboxChanged();" (mousedown)="changeTextColor()"[ngStyle]="{ 'margin-right': addMargin }" name="contact-email-bnt">
-			<span>I've read the <p class="pr-policy-mailsend-div-span-p">privacy policy</p>and agree to the processing of my data as outlined.</span>
+			<span><div style="width: 60%; right: 3px;" class="none">I've read the <p class="pr-policy-mailsend-div-span-p">privacy policy</p>and agree to the </div><div class="none">processing of my data as outlined.</div></span>
 			<label for="app-contact-email-input" [ngStyle]="{ 'opacity': displaySwitch }">Please accept the privacy policy.</label>
 		</div>
 		
 		<div class="email-div-bnt">
 			<button id="app-contact-email-bnt" (mousedown)="changeBntColor(true)" (mouseup)="changeBntColor(false);" [ngStyle]="{ 'background-color': bgColor, 'margin-top': ErrorMargin }" type="button" [disabled]="!isChecked">
-				<a [ngStyle]="{ 'color': textColor }">Let’s talk</a>
+				<a [ngStyle]="{ 'color': textColor }">{{ buttonText }}</a>
 			</button>
 			<div (click)="handleDisabledBnt()" [ngStyle]="{ 'display': divnone }"></div>
 		</div>

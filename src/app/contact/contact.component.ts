@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
 	selector: 'app-contact',
@@ -21,7 +21,8 @@ export class ContactComponent implements OnInit {
 	
 	lastActive = ""
 	ngOnInit(): void {
-		this.animations()
+		this.animations();
+		this.checkViewportWidth();
 	}
 
 	animations() {
@@ -152,4 +153,14 @@ export class ContactComponent implements OnInit {
 		
 	}
 
+	buttonText: string = 'Send message';
+
+	@HostListener('window:resize', ['$event'])
+	onResize(event: any) {
+	  this.checkViewportWidth();
+	}
+  
+	checkViewportWidth() {
+	  this.buttonText = window.innerWidth < 900 ? 'Say hello ;)' : 'Send message';
+	}
 }
