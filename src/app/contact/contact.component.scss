@@ -392,6 +392,9 @@
 }
 
 .contact-scroll-up {
+	@media (max-width: 900px) {
+		display: none;
+	}
 	cursor: pointer;
 	transition: all 0.3s;
 	position: absolute !important;
