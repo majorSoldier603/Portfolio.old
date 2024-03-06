@@ -23,9 +23,11 @@
 		</div>
 
 		<div class="pr-policy-mailsend-div" id="id-pr-policy-mailsend-div">
-			<input type="checkbox" id="app-contact-email-input" [(ngModel)]="isChecked" (change)="checkboxChanged();" (mousedown)="changeTextColor()"[ngStyle]="{ 'margin-right': addMargin }" name="contact-email-bnt">
-			<span><div style="width: 60%; right: 3px;" class="none">I've read the <p class="pr-policy-mailsend-div-span-p">privacy policy</p>and agree to the </div><div class="none">processing of my data as outlined.</div></span>
-			<label for="app-contact-email-input" [ngStyle]="{ 'opacity': displaySwitch }">Please accept the privacy policy.</label>
+			<div class="none" style="margin: 0;">
+				<input type="checkbox" id="app-contact-email-input" [(ngModel)]="isChecked" (change)="checkboxChanged();" (mousedown)="changeTextColor()"[ngStyle]="{ 'margin-right': addMargin }" name="contact-email-bnt">
+				<span><div style="width: 70%; right: 3px;" class="none">I've read the <p class="pr-policy-mailsend-div-span-p">privacy policy</p>and agree to the </div><div class="none">processing of my data as outlined.</div></span>
+			</div>
+			<label class="none" for="app-contact-email-input" [ngStyle]="{ 'opacity': displaySwitch }">Please accept the privacy policy.</label>
 		</div>
 		
 		<div class="email-div-bnt">
