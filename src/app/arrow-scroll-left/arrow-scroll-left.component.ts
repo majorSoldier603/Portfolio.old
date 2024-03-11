@@ -7,7 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ArrowScrollLeftComponent implements OnInit {
 	constructor() { }
+	
 	@Input() arrowId = 0;
+
 	ngOnInit() {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
