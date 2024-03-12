@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-arrow-scroll-left',
-	templateUrl: './arrow-scroll-left.component.html',
-	styleUrls: ['./arrow-scroll-left.component.scss']
+  selector: 'app-on-scroll-arrow',
+  templateUrl: './on-scroll-arrow.component.html',
+  styleUrls: ['./on-scroll-arrow.component.scss']
 })
-export class ArrowScrollLeftComponent implements OnInit {
+export class OnScrollArrowComponent implements OnInit {
 	constructor() { }
 	
 	@Input() arrowId = 0;
