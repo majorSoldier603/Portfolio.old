@@ -21,7 +21,6 @@
 					align-items: flex-start;
 					gap: 10px;
 					flex-shrink: 0;
-					border: 5px solid transparent;
 					filter: grayscale(100%);
 					transition: filter 0.3s ease-out;
 
@@ -50,13 +49,7 @@
 						scale: 1.8;
 						position: absolute;
 						top: 42%;
-						right: -4.8%;
-						@media (max-width: 900px)  {
-							right: -3.1%;
-						}
-						@media (max-width: 450px)  {
-							right: -7.1%;
-						}
+						right: -20px;
 						opacity: 0;
 						scale: 1;
 						transform: rotate(-0turn);
@@ -261,7 +254,6 @@
 					align-items: flex-start;
 					gap: 10px;
 					flex-shrink: 0;
-					border: 5px solid transparent;
 					transition: grayscale 0.3s ease;
 					filter: grayscale(100%);
 
@@ -290,13 +282,8 @@
 						scale: 1.8;
 						position: absolute;
 						top: 42%;
-						left: -4.8%;
-						@media (max-width: 900px)  {
-							left: -3.1%;
-						}						
-						@media (max-width: 450px)  {
-							left: -7.1%;
-						}
+						left: -20px;
+
 						opacity: 0;
 						scale: 1;
 						transform: rotate(-0turn);

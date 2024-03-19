@@ -56,7 +56,9 @@
 }
 
 .contact-form {
-
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 
 	div {
 		position: relative;
@@ -139,6 +141,7 @@
 	}
 
 	.pr-policy-mailsend-div {
+		width: 60vw;
 		margin-bottom: 2rem;
 		label {
 			font-family: Overpass;
@@ -212,7 +215,7 @@
 				line-height: 17px;
 				letter-spacing: 0em;
 
-				width: 90%;
+				width: 35%;
 
 				display: flex;
 				flex-direction: row;
@@ -233,7 +236,6 @@
 
 				div {
 					display: flex;
-					width: 50%;
 					white-space: nowrap;
 					margin: 0;
 				}
@@ -454,7 +456,7 @@
 	transition: all 0.3s;
 	position: absolute !important;
 	bottom: -2rem;
-	right: 5vw;
+	right: 6.25rem;
 
 	a {
 		position: absolute;
