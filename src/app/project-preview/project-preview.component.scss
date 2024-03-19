@@ -36,8 +36,10 @@
 					left: 5%;
 					width: 98%;
 					@media (max-width: 450px)  {
-						width: 95%;
-						top: 8%;
+						width: 98%;
+						top: 3%;
+						height: 98%;
+						left: 3%;
 					}
 					height: 94%;
 					border: 5px solid transparent;
@@ -269,9 +271,10 @@
 					right: 5%;
 					width: 98%;
 					@media (max-width: 450px)  {
-						width: 92%;
-						top: 8%;
-						height: 87%
+						width: 95%;
+						top: 5%;
+						height: 92%;
+						right: 3%;
 					}
 					height: 94%;
 					border: 5px solid transparent;
@@ -283,7 +286,6 @@
 						position: absolute;
 						top: 42%;
 						left: -20px;
-
 						opacity: 0;
 						scale: 1;
 						transform: rotate(-0turn);
