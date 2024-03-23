@@ -1,8 +1,43 @@
 .on-scroll-arrow {
-    display: flex;
-    padding: 13% 0 0 0;
-	@media (max-width: 900px) {
-		display: none;
+	display: flex;
+	padding: 7rem 0 0 0;
+	position: absolute;
+	left: 20vh;
+	top: -16vw;
+	@media (max-width: 1760px) {
+		left: 12vh;
+		top: -10vw;
+	}
+	@media (max-width: 1200px) {
+		left: 12vw;
+		top: -12vw;
+	}
+	@media (max-width: 450px) {
+		left: 25vw;
+		top: -48vw;
+	}
+
+	@keyframes down-right-animation-moba-xss {
+		0% {
+			opacity: 1;
+			width: 10rem;
+		}
+		25%	{
+			opacity: 0;
+		}
+		50%	{
+			opacity: 1;
+			width: 15rem;
+			margin-left: 0rem;
+		}
+		75%	{
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			width: 10rem;
+			margin-left: 5rem;
+		}
 	}
 
 	cursor: pointer;
@@ -16,30 +51,115 @@
 	}
 
 	div {
-		width: 2rem;
-		height: 2rem;
+		width: 8rem;
+		height: 8rem;
 		transform: rotate(135deg);
 		border-top: 0.25rem solid #000 !important;
 		border-left: 0.25rem solid #000 !important;
-        position: relative;
-        left: -2.4rem;
-        top: -1rem;
+		position: relative;
+		left: -9.8rem;
+		top: -4rem;
+		@media (max-width: 1200px) {
+			width: 3rem;
+			height: 3rem;
+			left: -3.7rem;
+			top: -1.5rem;
+		}
 	}
 
 	section {
 		transition: all 310ms;
 		content: "";
 		display: block;
-		width: 13.4375rem;
+		width: 20rem;
 		height: 0.3rem;
 		background-color: rgb(0, 0, 0);
 		left: 0;
 		top: 0;
+		@media (max-width: 1200px) {
+			width: 8rem;
+		}
 	}
 
-	&:hover {
-		section {
-			width: 19.75rem;
+	@keyframes down-right-animation {
+		0% {
+			opacity: 1;
+			width: 20rem;
+		}
+		25%	{
+			opacity: 0;
+		}
+		50%	{
+			opacity: 1;
+			width: 25rem;
+			margin-left: 0rem;
+		}
+		75%	{
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			width: 20rem;
+			margin-left: 5rem;
+		}
+	}
+
+	@keyframes down-right-animation-moba {
+		0% {
+			opacity: 1;
+			width: 10rem;
+		}
+		25%	{
+			opacity: 0;
+		}
+		50%	{
+			opacity: 1;
+			width: 15rem;
+			margin-left: 0rem;
+		}
+		75%	{
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			width: 10rem;
+			margin-left: 5rem;
+		}
+	}
+
+	@keyframes down-right-animation-moba-xss {
+		0% {
+			opacity: 1;
+			width: 8rem;
+		}
+		25%	{
+			opacity: 0;
+		}
+		50%	{
+			opacity: 1;
+			width: 12rem;
+			margin-left: 0rem;
+		}
+		75%	{
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			width: 8rem;
+			margin-left: 5rem;
+		}
+	}
+}
+
+.on-scroll-arrow.hover {
+	section {
+		animation: down-right-animation 0.2s ease-in-out forwards;
+		@media (max-width: 1200px) {
+			animation: down-right-animation-moba 0.2s ease-in-out forwards;
+		}
+
+		@media (max-width: 450px) {
+			animation: down-right-animation-moba-xss 0.2s ease-in-out forwards;
 		}
 	}
 }

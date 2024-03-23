@@ -4,3 +4,24 @@ app-on-scroll-arrow {
     height: fit-content;
     width: fit-content;
 }
+
+div {
+    height: fit-content; 
+    width: 100vw; 
+    aspect-ratio: 16 / 3;
+
+    @media (max-width: 1760px) {
+        aspect-ratio: 16 / 5;
+	}
+
+    @media (max-width: 1760px) {
+		left: 12vw;
+		top: -10vw;
+	}
+    @media (max-width: 800px) {
+        aspect-ratio: 16 / 10;
+	}
+    @media (max-width: 500px) {
+        aspect-ratio: 16 / 8;
+	}
+}
