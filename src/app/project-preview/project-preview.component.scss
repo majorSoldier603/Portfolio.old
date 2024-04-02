@@ -235,6 +235,7 @@
 }
 
 .right {
+	width: min-content;
 	main {
 		display: flex;
 		flex-direction: row-reverse;
