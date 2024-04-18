@@ -9,7 +9,7 @@ export class OnScrollArrowComponent {
 items: any;
 	constructor() { }
 	
-	@Input() arrowId = 0;
+	@Input() arrowId = 3;
 
 	isHovered: boolean = false;
 

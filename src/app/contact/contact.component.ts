@@ -161,6 +161,6 @@ export class ContactComponent implements OnInit {
 	}
   
 	checkViewportWidth() {
-	  this.buttonText = window.innerWidth < 900 ? 'Say hello ;)' : 'Send message';
+	  	this.buttonText = window.innerWidth < 900 ? 'Say hello ;)' : 'Send message';
 	}
 }
