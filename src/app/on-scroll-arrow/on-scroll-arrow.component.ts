@@ -6,7 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./on-scroll-arrow.component.scss']
 })
 export class OnScrollArrowComponent {
-items: any;
+	items: any;
+	componentId: any;
+	itemId: any;
+
 	constructor() { }
 	
 	@Input() arrowId = 3;

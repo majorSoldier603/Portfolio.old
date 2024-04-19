@@ -10,7 +10,8 @@ export class AppComponent {
 
 	buttonText: string = 'Send message';
 	textemail: string = '© Maximilian Stark 2024';
-
+	items: any;
+	
 	@HostListener('window:resize', ['$event'])
 	onResize(event: any) {
 	  this.checkViewportWidth();
