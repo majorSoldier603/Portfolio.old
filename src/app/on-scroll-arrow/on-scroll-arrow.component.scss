@@ -4,35 +4,27 @@
 	position: absolute;
 	left: 20vh;
 	top: -16vw;
-	@media (max-width: 1760px) {
-		left: 12vh;
-		top: -10vw;
-	}
-	@media (max-width: 1200px) {
-		left: 12vw;
-		top: -12vw;
-	}
-	@media (max-width: 450px) {
-		left: 25vw;
-		top: -48vw;
-	}
 
 	@keyframes down-right-animation-moba-xss {
 		0% {
 			opacity: 1;
 			width: 10rem;
 		}
-		25%	{
+
+		25% {
 			opacity: 0;
 		}
-		50%	{
+
+		50% {
 			opacity: 1;
 			width: 15rem;
 			margin-left: 0rem;
 		}
-		75%	{
+
+		75% {
 			opacity: 0;
 		}
+
 		100% {
 			opacity: 1;
 			width: 10rem;
@@ -59,7 +51,8 @@
 		position: relative;
 		left: -9.8rem;
 		top: -4rem;
-		@media (max-width: 1200px) {
+
+		@media (max-width: 800px) {
 			width: 3rem;
 			height: 3rem;
 			left: -3.7rem;
@@ -76,7 +69,12 @@
 		background-color: rgb(0, 0, 0);
 		left: 0;
 		top: 0;
-		@media (max-width: 1200px) {
+
+		@media (max-width: 800px) {
+			width: 10rem;
+		}
+
+		@media (max-width: 450px) {
 			width: 8rem;
 		}
 	}
@@ -86,17 +84,21 @@
 			opacity: 1;
 			width: 20rem;
 		}
-		25%	{
+
+		25% {
 			opacity: 0;
 		}
-		50%	{
+
+		50% {
 			opacity: 1;
 			width: 25rem;
 			margin-left: 0rem;
 		}
-		75%	{
+
+		75% {
 			opacity: 0;
 		}
+
 		100% {
 			opacity: 1;
 			width: 20rem;
@@ -109,17 +111,21 @@
 			opacity: 1;
 			width: 10rem;
 		}
-		25%	{
+
+		25% {
 			opacity: 0;
 		}
-		50%	{
+
+		50% {
 			opacity: 1;
 			width: 15rem;
 			margin-left: 0rem;
 		}
-		75%	{
+
+		75% {
 			opacity: 0;
 		}
+
 		100% {
 			opacity: 1;
 			width: 10rem;
@@ -132,17 +138,21 @@
 			opacity: 1;
 			width: 8rem;
 		}
-		25%	{
+
+		25% {
 			opacity: 0;
 		}
-		50%	{
+
+		50% {
 			opacity: 1;
 			width: 12rem;
 			margin-left: 0rem;
 		}
-		75%	{
+
+		75% {
 			opacity: 0;
 		}
+
 		100% {
 			opacity: 1;
 			width: 8rem;
@@ -154,7 +164,8 @@
 .on-scroll-arrow.hover {
 	section {
 		animation: down-right-animation 0.2s ease-in-out forwards;
-		@media (max-width: 1200px) {
+
+		@media (max-width: 800px) {
 			animation: down-right-animation-moba 0.2s ease-in-out forwards;
 		}
 
@@ -165,20 +176,47 @@
 }
 
 
-.on-scroll-arrow0 {
-    display: none !important;
-    left: 25vw;
-    top: -48vw;
+#arrow0 {
+	left: -53vw;
+	top: -64vw;
+
+	@media (max-width: 800px) {
+		left: -30vw;
+		top: -68vw;
+	}
+
+	@media (max-width: 450px) {
+		left: -42vw;
+		top: -77vw;
+	}
 }
 
-.on-scroll-arrow1 {
-    display: none;
-    left: 25vw;
-    top: -48vw;
+#arrow1 {
+	left: 10vw;
+    top: -8vw;
+
+	@media (max-width: 800px) {
+		left: 44vw;
+		top: -33vw;
+	}
+
+	@media (max-width: 450px) {
+		left: 25vw;
+		top: -48vw;
+	}
 }
 
-.on-scroll-arrow2 {
-    display: none;
-    left: 25vw;
-    top: -48vw;
+#arrow2 {
+	left: -60vw;
+	top: -80vw;
+
+	@media (max-width: 800px) {
+		left: -30vw;
+		top: -68vw;
+	}
+
+	@media (max-width: 450px) {
+		left: -38vw;
+		top: -80vw;
+	}
 }

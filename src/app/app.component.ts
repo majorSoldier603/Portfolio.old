@@ -1,4 +1,6 @@
 import { Component, AfterViewInit, ViewChildren, QueryList, ElementRef, HostListener } from '@angular/core';
+import { OnScrollArrowComponent } from './on-scroll-arrow/on-scroll-arrow.component';
+
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -16,17 +18,18 @@ export class AppComponent implements AfterViewInit {
 
 	@ViewChildren('scrollArrow', { read: ElementRef }) scrollArrows: QueryList<ElementRef>;
 
-	@HostListener('window:resize', ['$event'])
-	onResize(event: any) {
-		this.checkViewportWidth();
-	}
-
 	items = Array(1).fill(0);
 
 	ngAfterViewInit() {
 		this.scrollArrows.forEach((scrollArrow, index) => {
-			scrollArrow.nativeElement.id = 'arrow' + index;
+			scrollArrow.nativeElement.children[0].id = 'arrow' + index;
 		});
+	}
+
+	@HostListener('window:resize', ['$event'])
+
+	onResize(event: any) {
+		this.checkViewportWidth();
 	}
 
 	checkViewportWidth() {
