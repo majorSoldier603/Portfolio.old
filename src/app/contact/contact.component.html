@@ -5,18 +5,18 @@
 		<h3>Say hello! let's discuss your ideas and make it happen</h3>
 	</section>
 	<section class="form-section">
-		<form onsubmit="">
+		<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-			<label for="fname">First Name</label>
-			<input type="text" id="fname" name="firstname" placeholder="Your name..">
+			<label for="name">First Name</label>
+			<input [(ngModel)]="contactFormData.name" type="text" id="name" name="name" placeholder="Your name" required>
 
-			<label for="lname">Last Name</label>
-			<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+			<label for="email">Email</label>
+			<input [(ngModel)]="contactFormData.email" type="email" id="email" name="email" placeholder="Your Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
 
-			<label for="subject"> </label>
-			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+			<label for="message">Your Message</label>
+			<textarea [(ngModel)]="contactFormData.message" id="message" name="message" placeholder="Your message" required></textarea>
 
-			<input type="submit" value="Submit">
+			<input type="submit" [value]="buttonText">
 
 		</form>
 		<app-contact-scroll-up></app-contact-scroll-up>
