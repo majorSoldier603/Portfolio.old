@@ -1,33 +1,25 @@
-<section class="contact-sec">
-
+<main class="contact-main">
+	<section >
 		<h1 class="h1consec32">Say hi!</h1>
 		<h2>Want to discuss a new project?</h2>
 		<h3>Say hello! let's discuss your ideas and make it happen</h3>
+	</section>
+	<section class="form-section">
+		<form onsubmit="">
 
-	<app-footer></app-footer>
-</section>
+			<label for="fname">First Name</label>
+			<input type="text" id="fname" name="firstname" placeholder="Your name..">
 
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
+			<label for="subject"> </label>
+			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
+			<input type="submit" value="Submit">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-		<form (submit)="sendMail()" ngNativeValidate #AFrom id="myForm">
-		<input required type="text" #name>
-		<input required type="email" #email>
-		<textarea required type="text" #msg></textarea>
-		<button #submitbnt>lol</button>
 		</form>
--->
+		<app-contact-scroll-up></app-contact-scroll-up>
+	</section>
+	<app-footer></app-footer>
+</main>
