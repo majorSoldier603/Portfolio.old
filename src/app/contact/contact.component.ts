@@ -34,7 +34,7 @@ export class ContactComponent implements OnInit {
 	http = inject(HttpClient);
 
 	post = {
-	  endPoint: 'https://deineDomain.de/sendMail.php',
+	  endPoint: 'https://maximilian-stark.de/sendMail.php',
 	  body: (payload: any) => JSON.stringify(payload),
 	  options: {
 		headers: {
