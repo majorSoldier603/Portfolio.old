@@ -34,7 +34,7 @@ export class ContactComponent implements OnInit {
 	http = inject(HttpClient);
 
 	post = {
-	  endPoint: 'https://maximilian-stark.de/sendMail.php',
+	  endPoint: '/sendMail.php',
 	  body: (payload: any) => JSON.stringify(payload),
 	  options: {
 		headers: {
@@ -43,13 +43,24 @@ export class ContactComponent implements OnInit {
 		},
 	  },
 	};
+
+	posttest = {
+		endPoint: '/testmail.php',
+		body: (payload: any) => JSON.stringify(payload),
+		options: {
+		  headers: {
+			'Content-Type': 'text/plain',
+			responseType: 'text',
+		  },
+		},
+	  };
   
 	onSubmit(ngForm: NgForm) {
 	  if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
 		this.http.post(this.post.endPoint, this.post.body(this.contactFormData))
 		  .subscribe({
 			next: (response) => {
-  
+				console.log(response);
 			  ngForm.resetForm();
 			},
 			error: (error) => {
@@ -57,9 +68,18 @@ export class ContactComponent implements OnInit {
 			},
 			complete: () => console.info('send post complete'),
 		  });
-	  } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-  
-		ngForm.resetForm();
-	  }
+	  } else if (ngForm.submitted && this.mailTest) {
+		this.http.post(this.posttest.endPoint, this.post.body(this.contactFormData))
+		  .subscribe({
+			next: (response) => {
+				console.log(response);
+			  ngForm.resetForm();
+			},
+			error: (error) => {
+			  console.error(error);
+			},
+			complete: () => console.info('send testpost complete'),
+		});
+	  	}
 	}
 }
