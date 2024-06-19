@@ -8,13 +8,13 @@
 		<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
 			<label for="name">First Name</label>
-			<input [(ngModel)]="contactFormData.name" type="text" id="name" name="name" placeholder="Your name" required>
+			<input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
 
 			<label for="email">Email</label>
-			<input [(ngModel)]="contactFormData.email" type="email" id="email" name="email" placeholder="Your Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+			<input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
 
 			<label for="message">Your Message</label>
-			<textarea [(ngModel)]="contactFormData.message" id="message" name="message" placeholder="Your message" required></textarea>
+			<textarea [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message" required></textarea>
 
 			<input type="submit" [value]="buttonText">
 
