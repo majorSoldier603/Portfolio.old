@@ -8,11 +8,11 @@
 			<label class='menu-button-container' for="menu-toggle" id="label">
 				<div class='menu-button'></div>
 		  	</label>
-		  	<section class="menu shortcuts d-none" id="header-sec">
+		  	<section class="menu shortcuts" id="header-sec">
 				<div>
-					<main class="shortcuts-item center" style="color: black;"><span class="draw about" (click)="onCheckboxChange(); scrollToAboutMe();">About me</span></main>
-					<main class="shortcuts-item center" style="color: black;"><span class="draw skills">My skills</span></main>
-					<main class="shortcuts-item center" style="color: black;"><span class="draw portfolio">Portfolio</span></main>
+					<main class="shortcuts-item center" style="color: black;"><span class="draw about" (click)="onCheckboxChange(); scrollToAboutMe('app-about-me');">About me</span></main>
+					<main class="shortcuts-item center" style="color: black;"><span class="draw skills" (click)="onCheckboxChange(); scrollToAboutMe('app-my-skills');">My skills</span></main>
+					<main class="shortcuts-item center" style="color: black;"><span class="draw portfolio" (click)="onCheckboxChange(); scrollToAboutMe('app-project-list');">Portfolio</span></main>
 				</div>
 				<main class="shortcuts-item hello-box">
 					<div class="Divleft">

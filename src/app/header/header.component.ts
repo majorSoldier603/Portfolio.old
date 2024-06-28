@@ -11,18 +11,20 @@ export class HeaderComponent {
 	onCheckboxChange() {
 		console.log(this.isChecked)
 		if (this.isChecked) {
-			document.getElementById('header-sec')?.classList.remove('d-none')
 			document.getElementById('mainbody')?.classList.add('stop-scrolling');
 		} else if (!this.isChecked) {
 			setTimeout(() => {
-				document.getElementById('header-sec')?.classList.add('d-none');
 				document.getElementById('mainbody')?.classList.remove('stop-scrolling');
 			}, 100);
 		}
 	}
 
-	scrollToAboutMe() {
-		const element = document.getElementById("app-about-me");
+	scrollToAboutMe(elementID: string) {
+		this.isChecked = false
+		document.getElementById('mainbody')?.classList.remove('stop-scrolling');
+
+		console.log(document.getElementById("menu-toggle"));
+		const element = document.getElementById(elementID);
 		if (element) {
 			console.log('element: ', element);
 			element.scrollIntoView({

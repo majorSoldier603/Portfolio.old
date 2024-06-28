@@ -8,7 +8,7 @@
 		<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
 			<label for="name">First Name</label>
-			<input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
+			<input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required pattern="^[a-zA-Z ]+([a-zA-Z' ]*[a-zA-Z])?$">
 
 			<label for="email">Email</label>
 			<input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
@@ -16,10 +16,9 @@
 			<label for="message">Your Message</label>
 			<textarea [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message" required></textarea>
 
-			<input type="submit" [value]="buttonText">
+			<input type="submit" [value]="buttonText" [disabled]="!contactForm.form.valid">
 
 		</form>
 		<app-contact-scroll-up></app-contact-scroll-up>
 	</section>
-	<app-footer></app-footer>
 </main>

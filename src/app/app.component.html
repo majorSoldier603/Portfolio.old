@@ -4,13 +4,14 @@
 <div *ngFor="let item of items; let i = index">
     <app-on-scroll-arrow #scrollArrow style="transform: rotate(135deg);"></app-on-scroll-arrow>
 </div>
-<app-my-skills style="display: flex; justify-content: center;"></app-my-skills>
+<app-my-skills style="display: flex; justify-content: center;" id="app-my-skills"></app-my-skills>
 <!--<app-app-arrow-scroll-right></app-app-arrow-scroll-right>-->
 <div *ngFor="let item of items; let i = index">
     <app-on-scroll-arrow #scrollArrow style="transform: rotate(45deg);"></app-on-scroll-arrow>
 </div>
-<app-project-list></app-project-list>
+<app-project-list id="app-project-list"></app-project-list>
 <div *ngFor="let item of items; let i = index">
     <app-on-scroll-arrow #scrollArrow style="transform: rotate(135deg);"></app-on-scroll-arrow>
 </div>
 <app-contact></app-contact>
+<app-footer></app-footer>
