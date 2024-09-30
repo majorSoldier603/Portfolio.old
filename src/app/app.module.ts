@@ -15,31 +15,24 @@ import { SocialiconsComponent } from './socialicons/socialicons.component';
 import { LegaltextanibntComponent } from './legaltextanibnt/legaltextanibnt.component';
 import { OnScrollArrowComponent } from './on-scroll-arrow/on-scroll-arrow.component';
 import { ContactScrollUpComponent } from './contact-scroll-up/contact-scroll-up.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({
-	declarations: [
-		AppComponent,
-		HeaderComponent,
-		HeroComponent,
-		AboutMeComponent,
-		MySkillsComponent,
-		ProjectListComponent,
-		ProjectPreviewComponent,
-		ContactComponent,
-		FooterComponent,
-		SocialiconsComponent,
-		LegaltextanibntComponent,
-		OnScrollArrowComponent,
-		ContactScrollUpComponent,
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		FormsModule,
-		HttpClientModule
-	],
-	providers: [],
-	bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        HeroComponent,
+        AboutMeComponent,
+        MySkillsComponent,
+        ProjectListComponent,
+        ProjectPreviewComponent,
+        ContactComponent,
+        FooterComponent,
+        SocialiconsComponent,
+        LegaltextanibntComponent,
+        OnScrollArrowComponent,
+        ContactScrollUpComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

@@ -1,27 +1,33 @@
 import { Component, HostListener, OnInit, inject } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 
 @Component({
 		selector: 'app-contact',
+		standalone: true,
+		imports: [FormsModule],
 		templateUrl: './contact.component.html',
 		styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
-		constructor() { }
-
-		ngOnInit(): void {
-			this.checkViewportWidth();
-		}
+export class ContactComponent {
 
 		buttonText: string = 'Send message';
 
 		@HostListener('window:resize', ['$event'])
-	
-		checkViewportWidth() {
+		onResize(event: Event) {
+		  this.checkWindowWidth();
+		}
+	  
+		ngOnInit() {
+		  this.checkWindowWidth();
+		}
+	  
+		checkWindowWidth() {
 			this.buttonText = window.innerWidth < 900 ? 'Say hello ;)' : 'Send message';
 		}
+
+		constructor() { }
 
 		contactData = {
 			name: '',
@@ -29,7 +35,7 @@ export class ContactComponent implements OnInit {
 			message: ''
 		}
 
-		mailTest = false;
+		mailTest = true;
 
 		http = inject(HttpClient);
 
@@ -58,7 +64,7 @@ export class ContactComponent implements OnInit {
 					complete: () => console.info('send post complete'),
 				});
 		} else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+			console.log(ngForm)
 			ngForm.resetForm();
 		}
 	}
